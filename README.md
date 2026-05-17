@@ -1,6 +1,6 @@
 # DataReady
 
-**A Gemini-powered semantic-layer audit that tells you why your AI BI rollout will fail — before you connect a copilot.**
+**A Gemini-powered semantic-layer audit that tells you why your AI BI rollout will fail before you connect a copilot.**
 
 [![Built with Gemini](https://img.shields.io/badge/Built%20with-Gemini%202.5-4285F4?logo=google&logoColor=white)](https://ai.google.dev/)
 [![Milan AI Week Hackathon](https://img.shields.io/badge/Milan%20AI%20Week-2026-FF6B35)](https://lablab.ai/ai-hackathons/milan-ai-week-hackathon)
@@ -59,7 +59,7 @@ We audited three authoritative government datasets — no synthetic data, no che
 |---|---|---|---|---|---|
 | US Traffic Fatalities (FARS 2023) | NHTSA | **20** | **F** | 19 | Gemini |
 | NYC School Quality Reports (2024) | NYC DOE | **23** | **F** | 23 | Gemini |
-| US Employment Situation (2019–2026) | BLS / FRED | **80** | **B** | 3 | Deterministic |
+| US Employment Situation (2019–2026) | BLS / FRED | **80** | **B** | 3 | Gemini |
 
 DataReady discriminates: messy data gets an F with detailed remediation. Clean data gets a B with minimal flags. That's what makes the F scores trustworthy.
 
@@ -252,6 +252,6 @@ MIT
 
 ## Author
 
-Built by [Your Name](https://linkedin.com/in/YOUR_HANDLE) for Milan AI Week 2026.
+Built by [Your Name](https://linkedin.com/in/sumaiya-shrabony) for Milan AI Week 2026.
 
 Questions? Open an issue or reach out on LinkedIn.
