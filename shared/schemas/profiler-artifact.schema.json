@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dataready.local/schemas/profiler-artifact.schema.json",
+  "title": "ProfilerArtifact",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "dataset_fingerprint": {
+      "type": "string"
+    },
+    "profiling_mode": {
+      "type": "string",
+      "enum": ["tabular_only", "multimodal", "degraded_fallback"]
+    },
+    "columns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string" },
+          "declared_type": { "type": ["string", "null"] },
+          "detected_type": { "type": ["string", "null"] },
+          "null_pct": { "type": ["number", "null"] },
+          "unique_count": { "type": ["integer", "null"] },
+          "quality_flag": {
+            "type": "string",
+            "enum": ["clean", "warning", "critical"]
+          },
+          "phantom_dimension": { "type": "boolean" }
+        },
+        "required": [
+          "name",
+          "declared_type",
+          "detected_type",
+          "null_pct",
+          "unique_count",
+          "quality_flag",
+          "phantom_dimension"
+        ]
+      }
+    },
+    "cross_modal_findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "type": { "type": "string" },
+          "severity": {
+            "type": "string",
+            "enum": ["critical", "high", "medium", "low"]
+          },
+          "summary": { "type": "string" }
+        },
+        "required": ["type", "severity", "summary"]
+      }
+    },
+    "schema_quality_score": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "dataset_fingerprint",
+    "profiling_mode",
+    "columns",
+    "cross_modal_findings",
+    "schema_quality_score"
+  ]
+}
+

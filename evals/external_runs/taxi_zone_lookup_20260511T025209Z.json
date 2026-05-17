@@ -1,0 +1,147 @@
+{
+  "request": {
+    "audit_mode": "csv",
+    "dataset_name": "taxi_zone_lookup",
+    "dataset_format": "csv",
+    "includes_dashboard_image": false,
+    "includes_data_dictionary": false,
+    "compliance_mode": "standard"
+  },
+  "profiler": {
+    "dataset_fingerprint": "taxi_zone_lookup:1a99e105092230f8",
+    "profiling_mode": "tabular_only",
+    "row_count_sampled": 265,
+    "column_count": 4,
+    "multimodal_context_used": false,
+    "columns": [
+      {
+        "name": "LocationID",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 265,
+        "unique_ratio": 1.0,
+        "quality_flag": "clean",
+        "sample_values": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Borough",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0075,
+        "raw_null_pct": 0.0038,
+        "unique_count": 6,
+        "unique_ratio": 0.0228,
+        "quality_flag": "clean",
+        "sample_values": [
+          "EWR",
+          "Queens",
+          "Bronx",
+          "Manhattan",
+          "Staten Island"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Zone",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0038,
+        "raw_null_pct": 0.0038,
+        "unique_count": 261,
+        "unique_ratio": 0.9886,
+        "quality_flag": "warning",
+        "sample_values": [
+          "Newark Airport",
+          "Jamaica Bay",
+          "Allerton/Pelham Gardens",
+          "Alphabet City",
+          "Arden Heights"
+        ],
+        "quality_reason": "Column behaves more like a high-cardinality text field than a stable dimension.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "service_zone",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0075,
+        "raw_null_pct": 0.0075,
+        "unique_count": 4,
+        "unique_ratio": 0.0152,
+        "quality_flag": "clean",
+        "sample_values": [
+          "EWR",
+          "Boro Zone",
+          "Boro Zone",
+          "Yellow Zone",
+          "Boro Zone"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      }
+    ],
+    "cross_modal_findings": [],
+    "schema_quality_score": 0.9125
+  },
+  "issues": {
+    "issues": [
+      {
+        "issue_id": "Zone_free_text_dimension",
+        "column_name": "Zone",
+        "severity": "low",
+        "category": "modeling_risk",
+        "problem_description": "Column `Zone` behaves more like free text than a stable dimension.",
+        "business_impact": "High-cardinality text fields add noise to semantic layers and usually perform poorly as filterable business dimensions."
+      }
+    ],
+    "generator": "deterministic"
+  },
+  "remediation": {
+    "fixes": [
+      {
+        "issue_id": "Zone_free_text_dimension",
+        "priority": 1,
+        "plain_english_fix": "Keep this field out of the primary semantic model unless you intentionally want a high-cardinality text search surface.",
+        "sql_snippet": "SELECT Zone FROM your_table LIMIT 100;",
+        "python_snippet": "df['Zone'] = df['Zone'].astype(str)"
+      }
+    ],
+    "generator": "deterministic"
+  },
+  "report": {
+    "score": 93,
+    "grade": "A",
+    "confidence_level": "low",
+    "evidence_coverage": "csv_only",
+    "top_3_blockers": [
+      "Column `Zone` behaves more like free text than a stable dimension."
+    ],
+    "one_line_verdict": "Structural issues were found. This score is provisional because semantic references were not provided; add a dashboard or dictionary for higher-confidence validation.",
+    "score_computation": [
+      {
+        "issue_id": "Zone_free_text_dimension",
+        "deduction": 2,
+        "reason": "Column `Zone` behaves more like free text than a stable dimension."
+      }
+    ],
+    "generator": "deterministic"
+  },
+  "reasoning_trace": {
+    "path": "deterministic",
+    "validator": "deterministic",
+    "planner": "deterministic",
+    "scorer": "deterministic",
+    "note": "DATAREADY_DISABLE_LLM is set; deterministic-only mode active."
+  }
+}

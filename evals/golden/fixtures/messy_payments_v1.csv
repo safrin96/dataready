@@ -1,0 +1,6 @@
+payment_id,customer_id,invoice_date,paid_date,amount_usd,payment_status,notes
+P-1001,501,04/01/2026,2026-04-03,$1,200.00,PAID,ok
+P-1002,502,13/04/2026,2026/04/14,450.25,paid,NULL
+P-1003,503,2026-04-05,, -25.00,refunded,n/a
+P-1004,504,2026/04/06,04-07-2026,800,1,follow up
+P-1005,505,2026-04-08,2026-04-08,0,unknown,none

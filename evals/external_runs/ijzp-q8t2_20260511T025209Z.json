@@ -1,0 +1,531 @@
+{
+  "request": {
+    "audit_mode": "csv",
+    "dataset_name": "ijzp-q8t2",
+    "dataset_format": "csv",
+    "includes_dashboard_image": false,
+    "includes_data_dictionary": false,
+    "compliance_mode": "standard"
+  },
+  "profiler": {
+    "dataset_fingerprint": "ijzp-q8t2:b68fbac3119d7ac6",
+    "profiling_mode": "tabular_only",
+    "row_count_sampled": 10000,
+    "column_count": 22,
+    "multimodal_context_used": false,
+    "columns": [
+      {
+        "name": "id",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 10000,
+        "unique_ratio": 1.0,
+        "quality_flag": "clean",
+        "sample_values": [
+          "14184394",
+          "14184382",
+          "14184377",
+          "14184316",
+          "14185700"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "case_number",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 9997,
+        "unique_ratio": 0.9997,
+        "quality_flag": "warning",
+        "sample_values": [
+          "JK238907",
+          "JK238960",
+          "JK238940",
+          "JK238882",
+          "JK240597"
+        ],
+        "quality_reason": "Column behaves more like a high-cardinality text field than a stable dimension.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "date",
+        "declared_type": "object",
+        "detected_type": "date_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 5353,
+        "unique_ratio": 0.5353,
+        "quality_flag": "warning",
+        "sample_values": [
+          "2026-05-02T00:00:00.000",
+          "2026-05-02T00:00:00.000",
+          "2026-05-02T00:00:00.000",
+          "2026-05-02T00:00:00.000",
+          "2026-05-02T00:00:00.000"
+        ],
+        "quality_reason": "Values look date-like but the column is stored as free-form text.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "block",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 6513,
+        "unique_ratio": 0.6513,
+        "quality_flag": "clean",
+        "sample_values": [
+          "007XX W 74TH ST",
+          "069XX N WESTERN AVE",
+          "0000X W DIVISION ST",
+          "084XX S STONY ISLAND AVE",
+          "007XX N FAIRBANKS CT"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "iucr",
+        "declared_type": "object",
+        "detected_type": "numeric_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 229,
+        "unique_ratio": 0.0229,
+        "quality_flag": "warning",
+        "sample_values": [
+          "143A",
+          "5002",
+          "0810",
+          "051A",
+          "0281"
+        ],
+        "quality_reason": "Values look numeric but the column is stored as text.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "primary_type",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 29,
+        "unique_ratio": 0.0029,
+        "quality_flag": "clean",
+        "sample_values": [
+          "WEAPONS VIOLATION",
+          "OTHER OFFENSE",
+          "THEFT",
+          "ASSAULT",
+          "CRIMINAL SEXUAL ASSAULT"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "description",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 219,
+        "unique_ratio": 0.0219,
+        "quality_flag": "clean",
+        "sample_values": [
+          "UNLAWFUL POSSESSION - HANDGUN",
+          "OTHER VEHICLE OFFENSE",
+          "OVER $500",
+          "AGGRAVATED - HANDGUN",
+          "NON-AGGRAVATED"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "location_description",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0036,
+        "raw_null_pct": 0.0036,
+        "unique_count": 93,
+        "unique_ratio": 0.0093,
+        "quality_flag": "clean",
+        "sample_values": [
+          "STREET",
+          "STREET",
+          "STREET",
+          "RESTAURANT",
+          "HOSPITAL BUILDING / GROUNDS"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "arrest",
+        "declared_type": "bool",
+        "detected_type": "boolean",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 2,
+        "unique_ratio": 0.0002,
+        "quality_flag": "clean",
+        "sample_values": [
+          "True",
+          "False",
+          "False",
+          "True",
+          "False"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "domestic",
+        "declared_type": "bool",
+        "detected_type": "boolean",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 2,
+        "unique_ratio": 0.0002,
+        "quality_flag": "clean",
+        "sample_values": [
+          "False",
+          "False",
+          "False",
+          "False",
+          "False"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "beat",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 274,
+        "unique_ratio": 0.0274,
+        "quality_flag": "clean",
+        "sample_values": [
+          "732",
+          "2411",
+          "1824",
+          "412",
+          "1834"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "district",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 22,
+        "unique_ratio": 0.0022,
+        "quality_flag": "clean",
+        "sample_values": [
+          "7",
+          "24",
+          "18",
+          "4",
+          "18"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "ward",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 50,
+        "unique_ratio": 0.005,
+        "quality_flag": "clean",
+        "sample_values": [
+          "6",
+          "40",
+          "2",
+          "8",
+          "2"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "community_area",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 77,
+        "unique_ratio": 0.0077,
+        "quality_flag": "clean",
+        "sample_values": [
+          "68",
+          "2",
+          "8",
+          "45",
+          "8"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "fbi_code",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 24,
+        "unique_ratio": 0.0024,
+        "quality_flag": "clean",
+        "sample_values": [
+          "15",
+          "26",
+          "06",
+          "04A",
+          "02"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "x_coordinate",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0043,
+        "raw_null_pct": 0.0043,
+        "unique_count": 7645,
+        "unique_ratio": 0.7678,
+        "quality_flag": "warning",
+        "sample_values": [
+          "1172792.0",
+          "1159070.0",
+          "1175950.0",
+          "1188276.0",
+          "1178370.0"
+        ],
+        "quality_reason": "Column behaves more like a high-cardinality text field than a stable dimension.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "y_coordinate",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0043,
+        "raw_null_pct": 0.0043,
+        "unique_count": 7908,
+        "unique_ratio": 0.7942,
+        "quality_flag": "warning",
+        "sample_values": [
+          "1855810.0",
+          "1945645.0",
+          "1908370.0",
+          "1849160.0",
+          "1905271.0"
+        ],
+        "quality_reason": "Column behaves more like a high-cardinality text field than a stable dimension.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "year",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 1,
+        "unique_ratio": 0.0001,
+        "quality_flag": "warning",
+        "sample_values": [
+          "2026",
+          "2026",
+          "2026",
+          "2026",
+          "2026"
+        ],
+        "quality_reason": "Column has little or no value variation.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "updated_on",
+        "declared_type": "object",
+        "detected_type": "date_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 33,
+        "unique_ratio": 0.0033,
+        "quality_flag": "warning",
+        "sample_values": [
+          "2026-05-09T15:42:04.000",
+          "2026-05-09T15:42:04.000",
+          "2026-05-09T15:42:04.000",
+          "2026-05-09T15:42:04.000",
+          "2026-05-09T15:42:04.000"
+        ],
+        "quality_reason": "Values look date-like but the column is stored as free-form text.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "latitude",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0043,
+        "raw_null_pct": 0.0043,
+        "unique_count": 8356,
+        "unique_ratio": 0.8392,
+        "quality_flag": "warning",
+        "sample_values": [
+          "41.759774484",
+          "42.006581442",
+          "41.903933222",
+          "41.741170915",
+          "41.895374574"
+        ],
+        "quality_reason": "Column behaves more like a high-cardinality text field than a stable dimension.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "longitude",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0043,
+        "raw_null_pct": 0.0043,
+        "unique_count": 8356,
+        "unique_ratio": 0.8392,
+        "quality_flag": "warning",
+        "sample_values": [
+          "-87.64228165",
+          "-87.690105118",
+          "-87.629128536",
+          "-87.585745319",
+          "-87.620333997"
+        ],
+        "quality_reason": "Column behaves more like a high-cardinality text field than a stable dimension.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "location",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0043,
+        "raw_null_pct": 0.0043,
+        "unique_count": 8356,
+        "unique_ratio": 0.8392,
+        "quality_flag": "warning",
+        "sample_values": [
+          ",  \n(41.759774484, -87.64228165)",
+          ",  \n(42.006581442, -87.690105118)",
+          ",  \n(41.903933222, -87.629128536)",
+          ",  \n(41.741170915, -87.585745319)",
+          ",  \n(41.895374574, -87.620333997)"
+        ],
+        "quality_reason": "Column behaves more like a high-cardinality text field than a stable dimension.",
+        "phantom_dimension": false
+      }
+    ],
+    "cross_modal_findings": [],
+    "schema_quality_score": 0.8409
+  },
+  "issues": {
+    "issues": [
+      {
+        "issue_id": "date_date_text",
+        "column_name": "date",
+        "severity": "high",
+        "category": "date_handling",
+        "problem_description": "Column `date` looks like a date field but is stored as free-form text.",
+        "business_impact": "Date filters, time-series trends, and comparison logic can silently fail when the platform cannot trust a field as a real date."
+      },
+      {
+        "issue_id": "updated_on_date_text",
+        "column_name": "updated_on",
+        "severity": "high",
+        "category": "date_handling",
+        "problem_description": "Column `updated_on` looks like a date field but is stored as free-form text.",
+        "business_impact": "Date filters, time-series trends, and comparison logic can silently fail when the platform cannot trust a field as a real date."
+      },
+      {
+        "issue_id": "case_number_free_text_dimension",
+        "column_name": "case_number",
+        "severity": "low",
+        "category": "modeling_risk",
+        "problem_description": "Column `case_number` behaves more like free text than a stable dimension.",
+        "business_impact": "High-cardinality text fields add noise to semantic layers and usually perform poorly as filterable business dimensions."
+      }
+    ],
+    "generator": "deterministic"
+  },
+  "remediation": {
+    "fixes": [
+      {
+        "issue_id": "date_date_text",
+        "priority": 1,
+        "plain_english_fix": "Normalize the field into a real date or timestamp before semantic modeling so filters and trends behave predictably.",
+        "sql_snippet": "SELECT TO_DATE(date, 'YYYY-MM-DD') AS date_date FROM your_table;",
+        "python_snippet": "df['date'] = pd.to_datetime(df['date'], errors='coerce')"
+      },
+      {
+        "issue_id": "updated_on_date_text",
+        "priority": 2,
+        "plain_english_fix": "Normalize the field into a real date or timestamp before semantic modeling so filters and trends behave predictably.",
+        "sql_snippet": "SELECT TO_DATE(updated_on, 'YYYY-MM-DD') AS updated_on_date FROM your_table;",
+        "python_snippet": "df['updated_on'] = pd.to_datetime(df['updated_on'], errors='coerce')"
+      },
+      {
+        "issue_id": "case_number_free_text_dimension",
+        "priority": 3,
+        "plain_english_fix": "Keep this field out of the primary semantic model unless you intentionally want a high-cardinality text search surface.",
+        "sql_snippet": "SELECT case_number FROM your_table LIMIT 100;",
+        "python_snippet": "df['case_number'] = df['case_number'].astype(str)"
+      }
+    ],
+    "generator": "deterministic"
+  },
+  "report": {
+    "score": 73,
+    "grade": "C",
+    "confidence_level": "low",
+    "evidence_coverage": "csv_only",
+    "top_3_blockers": [
+      "Column `date` looks like a date field but is stored as free-form text.",
+      "Column `updated_on` looks like a date field but is stored as free-form text.",
+      "Column `case_number` behaves more like free text than a stable dimension."
+    ],
+    "one_line_verdict": "Structural issues were found. This score is provisional because semantic references were not provided; add a dashboard or dictionary for higher-confidence validation.",
+    "score_computation": [
+      {
+        "issue_id": "date_date_text",
+        "deduction": 10,
+        "reason": "Column `date` looks like a date field but is stored as free-form text."
+      },
+      {
+        "issue_id": "updated_on_date_text",
+        "deduction": 10,
+        "reason": "Column `updated_on` looks like a date field but is stored as free-form text."
+      },
+      {
+        "issue_id": "case_number_free_text_dimension",
+        "deduction": 2,
+        "reason": "Column `case_number` behaves more like free text than a stable dimension."
+      }
+    ],
+    "generator": "deterministic"
+  },
+  "reasoning_trace": {
+    "path": "deterministic",
+    "validator": "deterministic",
+    "planner": "deterministic",
+    "scorer": "deterministic",
+    "note": "DATAREADY_DISABLE_LLM is set; deterministic-only mode active."
+  }
+}

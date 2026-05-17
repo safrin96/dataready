@@ -1,0 +1,14 @@
+{
+  "version": "v1",
+  "required_categories": [
+    "small_clean_datasets",
+    "messy_enterprise_csvs",
+    "wide_schemas",
+    "multimodal_pairs",
+    "performance_near_limit",
+    "oversized_rejection_cases",
+    "adversarial_edge_cases",
+    "sampling_credibility_cases"
+  ],
+  "notes": "Phase 3 gate for BI failure-mode coverage. The eval matrix runner must execute all required categories."
+}

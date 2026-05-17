@@ -1,0 +1,279 @@
+{
+  "request": {
+    "audit_mode": "semantic_audit",
+    "dataset_name": "bls_employment",
+    "dataset_format": "csv",
+    "includes_dashboard_image": true,
+    "includes_data_dictionary": true,
+    "compliance_mode": "standard",
+    "audit_context": null
+  },
+  "profiler": {
+    "dataset_fingerprint": "bls_employment:65583ad6e86edb8a",
+    "profiling_mode": "multimodal",
+    "row_count_sampled": 88,
+    "column_count": 8,
+    "multimodal_context_used": true,
+    "sampling_strategy": "head",
+    "sampling_detail": "Head sample: first 88 rows.",
+    "coverage_summary": "Sample rows: 88",
+    "columns": [
+      {
+        "name": "date",
+        "declared_type": "object",
+        "detected_type": "date_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 88,
+        "unique_ratio": 1.0,
+        "quality_flag": "warning",
+        "sample_values": [
+          "2019-01-01",
+          "2019-02-01",
+          "2019-03-01",
+          "2019-04-01",
+          "2019-05-01"
+        ],
+        "quality_reason": "Values look date-like but the column is stored as free-form text.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "total_nonfarm_employment_thousands",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 88,
+        "unique_ratio": 1.0,
+        "quality_flag": "clean",
+        "sample_values": [
+          "150060",
+          "150067",
+          "150295",
+          "150591",
+          "150618"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "unemployment_rate_u3_pct",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0114,
+        "raw_null_pct": 0.0114,
+        "unique_count": 28,
+        "unique_ratio": 0.3218,
+        "quality_flag": "clean",
+        "sample_values": [
+          "4.0",
+          "3.8",
+          "3.8",
+          "3.7",
+          "3.6"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "unemployment_rate_u6_pct",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0114,
+        "raw_null_pct": 0.0114,
+        "unique_count": 36,
+        "unique_ratio": 0.4138,
+        "quality_flag": "clean",
+        "sample_values": [
+          "8.0",
+          "7.2",
+          "7.4",
+          "7.4",
+          "7.1"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "labor_force_participation_rate_pct",
+        "declared_type": "float64",
+        "detected_type": "empty",
+        "null_pct": 1.0,
+        "raw_null_pct": 1.0,
+        "unique_count": 0,
+        "unique_ratio": 0.0,
+        "quality_flag": "critical",
+        "sample_values": [],
+        "quality_reason": "Column is effectively empty for most rows.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "total_private_employment_thousands",
+        "declared_type": "float64",
+        "detected_type": "empty",
+        "null_pct": 1.0,
+        "raw_null_pct": 1.0,
+        "unique_count": 0,
+        "unique_ratio": 0.0,
+        "quality_flag": "critical",
+        "sample_values": [],
+        "quality_reason": "Column is effectively empty for most rows.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "avg_hourly_earnings_all_private",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 88,
+        "unique_ratio": 1.0,
+        "quality_flag": "warning",
+        "sample_values": [
+          "27.59",
+          "27.69",
+          "27.77",
+          "27.79",
+          "27.88"
+        ],
+        "quality_reason": "Column behaves more like a high-cardinality text field than a stable dimension.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "avg_weekly_hours_all_private",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 10,
+        "unique_ratio": 0.1136,
+        "quality_flag": "clean",
+        "sample_values": [
+          "34.5",
+          "34.4",
+          "34.5",
+          "34.4",
+          "34.4"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      }
+    ],
+    "cross_modal_findings": [
+      {
+        "type": "dashboard_context_attached",
+        "severity": "low",
+        "summary": "Dashboard context was attached and is preserved for the multimodal profiler path."
+      },
+      {
+        "type": "dictionary_context_attached",
+        "severity": "low",
+        "summary": "Data dictionary context was attached and is preserved for semantic cross-checking."
+      },
+      {
+        "type": "multimodal_path_deferred",
+        "severity": "low",
+        "summary": "Multimodal context is attached, but the advanced Gemini cross-check path is not active in this environment."
+      }
+    ],
+    "schema_quality_score": 0.725
+  },
+  "issues": {
+    "issues": [
+      {
+        "issue_id": "date_date_text",
+        "column_name": "date",
+        "severity": "high",
+        "category": "date_handling",
+        "problem_description": "Column `date` looks like a date field but is stored as free-form text.",
+        "business_impact": "Date filters, time-series trends, and comparison logic can silently fail when the platform cannot trust a field as a real date."
+      },
+      {
+        "issue_id": "labor_force_participation_rate_pct_mostly_null",
+        "column_name": "labor_force_participation_rate_pct",
+        "severity": "medium",
+        "category": "completeness",
+        "problem_description": "Column `labor_force_participation_rate_pct` is effectively empty for most rows.",
+        "business_impact": "Sparse fields create misleading filters and noisy joins, and they rarely deserve a prominent place in a semantic model."
+      },
+      {
+        "issue_id": "total_private_employment_thousands_mostly_null",
+        "column_name": "total_private_employment_thousands",
+        "severity": "medium",
+        "category": "completeness",
+        "problem_description": "Column `total_private_employment_thousands` is effectively empty for most rows.",
+        "business_impact": "Sparse fields create misleading filters and noisy joins, and they rarely deserve a prominent place in a semantic model."
+      }
+    ],
+    "generator": "deterministic"
+  },
+  "remediation": {
+    "fixes": [
+      {
+        "issue_id": "date_date_text",
+        "priority": 1,
+        "plain_english_fix": "Normalize the field into a real date or timestamp before semantic modeling so filters and trends behave predictably.",
+        "sql_snippet": "SELECT TO_DATE(date, 'YYYY-MM-DD') AS date_date FROM your_table;",
+        "python_snippet": "df['date'] = pd.to_datetime(df['date'], errors='coerce')"
+      },
+      {
+        "issue_id": "labor_force_participation_rate_pct_mostly_null",
+        "priority": 2,
+        "plain_english_fix": "Either remove this field from the semantic layer or document exactly why it is empty so it does not appear as a trusted attribute.",
+        "sql_snippet": "SELECT labor_force_participation_rate_pct FROM your_table WHERE labor_force_participation_rate_pct IS NOT NULL LIMIT 50;",
+        "python_snippet": "df = df.loc[df['labor_force_participation_rate_pct'].notna()].copy()"
+      },
+      {
+        "issue_id": "total_private_employment_thousands_mostly_null",
+        "priority": 3,
+        "plain_english_fix": "Either remove this field from the semantic layer or document exactly why it is empty so it does not appear as a trusted attribute.",
+        "sql_snippet": "SELECT total_private_employment_thousands FROM your_table WHERE total_private_employment_thousands IS NOT NULL LIMIT 50;",
+        "python_snippet": "df = df.loc[df['total_private_employment_thousands'].notna()].copy()"
+      }
+    ],
+    "generator": "deterministic"
+  },
+  "report": {
+    "score": 80,
+    "grade": "B",
+    "confidence_level": "high",
+    "evidence_coverage": "csv_plus_dashboard_dictionary",
+    "top_3_blockers": [
+      "Column `date` looks like a date field but is stored as free-form text.",
+      "Column `labor_force_participation_rate_pct` is effectively empty for most rows.",
+      "Column `total_private_employment_thousands` is effectively empty for most rows."
+    ],
+    "one_line_verdict": "The environment is directionally usable with contextual evidence, but there are still meaningful modeling risks to resolve before broad rollout.",
+    "score_computation": [
+      {
+        "issue_id": "date_date_text",
+        "deduction": 10,
+        "reason": "Column `date` looks like a date field but is stored as free-form text."
+      },
+      {
+        "issue_id": "labor_force_participation_rate_pct_mostly_null",
+        "deduction": 5,
+        "reason": "Column `labor_force_participation_rate_pct` is effectively empty for most rows."
+      },
+      {
+        "issue_id": "total_private_employment_thousands_mostly_null",
+        "deduction": 5,
+        "reason": "Column `total_private_employment_thousands` is effectively empty for most rows."
+      }
+    ],
+    "generator": "deterministic"
+  },
+  "business_audit": null,
+  "impact_map": null,
+  "fix_pack": null,
+  "dictionary": null,
+  "reconciliation": null,
+  "data_handling": null,
+  "reasoning_trace": {
+    "path": "deterministic",
+    "validator": "deterministic",
+    "planner": "deterministic",
+    "scorer": "deterministic",
+    "note": "Gemini unavailable; validator=llm; planner=llm; scorer=fallback(Gemini quota exhausted. Check your quota/billing or retry later.)"
+  }
+}

@@ -1,0 +1,6 @@
+employee_id,department,job_level,hire_date,location,employment_type,base_salary_usd,manager_id
+E001,Engineering,L3,2022-06-15,Denver,full_time,135000,E010
+E002,Engineering,L2,2023-02-01,Remote,full_time,112000,E010
+E003,Sales,L4,2021-09-20,New York,full_time,145000,E020
+E004,Finance,L2,2024-01-10,Denver,full_time,98000,E030
+E005,Support,L1,2024-07-05,Austin,contract,62000,E040

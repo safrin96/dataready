@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dataready.local/schemas/final-report.schema.json",
+  "title": "FinalReport",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "grade": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D", "F"]
+    },
+    "top_3_blockers": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 3,
+      "items": {
+        "type": "string"
+      }
+    },
+    "one_line_verdict": {
+      "type": "string"
+    },
+    "score_computation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "issue_id": { "type": "string" },
+          "deduction": { "type": "integer" },
+          "reason": { "type": "string" }
+        },
+        "required": ["issue_id", "deduction", "reason"]
+      }
+    }
+  },
+  "required": [
+    "score",
+    "grade",
+    "top_3_blockers",
+    "one_line_verdict",
+    "score_computation"
+  ]
+}
+

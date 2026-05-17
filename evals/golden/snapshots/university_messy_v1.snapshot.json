@@ -1,0 +1,243 @@
+{
+  "request": {
+    "audit_mode": "csv",
+    "dataset_name": "university_messy_v1",
+    "dataset_format": "csv",
+    "includes_dashboard_image": false,
+    "includes_data_dictionary": false,
+    "compliance_mode": "standard"
+  },
+  "profiler": {
+    "dataset_fingerprint": "university_messy_v1:31d0686ce97610bd",
+    "profiling_mode": "tabular_only",
+    "row_count_sampled": 5,
+    "column_count": 6,
+    "multimodal_context_used": false,
+    "columns": [
+      {
+        "name": "student_id",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 5,
+        "unique_ratio": 1.0,
+        "quality_flag": "clean",
+        "sample_values": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "student_status",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 5,
+        "unique_ratio": 1.0,
+        "quality_flag": "warning",
+        "sample_values": [
+          "active",
+          "1",
+          "yes",
+          "enrolled",
+          "TRUE"
+        ],
+        "quality_reason": "Column behaves more like a high-cardinality text field than a stable dimension.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "val1",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.2,
+        "raw_null_pct": 0.2,
+        "unique_count": 4,
+        "unique_ratio": 1.0,
+        "quality_flag": "critical",
+        "sample_values": [
+          "blue",
+          "green",
+          "orange",
+          "purple"
+        ],
+        "quality_reason": "Column name is too ambiguous for reliable semantic reasoning.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "enrollment_date",
+        "declared_type": "object",
+        "detected_type": "date_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 5,
+        "unique_ratio": 1.0,
+        "quality_flag": "warning",
+        "sample_values": [
+          "2024-01-10",
+          "01/14/2024",
+          "2024/01/21",
+          "14-02-2024",
+          "2024-03-01"
+        ],
+        "quality_reason": "Values look date-like but the column is stored as free-form text.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "revenue",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 5,
+        "unique_ratio": 1.0,
+        "quality_flag": "clean",
+        "sample_values": [
+          "200",
+          "-25",
+          "140",
+          "190",
+          "210"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "notes",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.6,
+        "raw_null_pct": 0.4,
+        "unique_count": 2,
+        "unique_ratio": 1.0,
+        "quality_flag": "warning",
+        "sample_values": [
+          "ready",
+          "follow up"
+        ],
+        "quality_reason": "Column behaves more like a high-cardinality text field than a stable dimension.",
+        "phantom_dimension": false
+      }
+    ],
+    "cross_modal_findings": [],
+    "schema_quality_score": 0.7
+  },
+  "issues": {
+    "issues": [
+      {
+        "issue_id": "student_status_status_chaos",
+        "column_name": "student_status",
+        "severity": "critical",
+        "category": "semantic_consistency",
+        "problem_description": "Column `student_status` has too many distinct values for a status-like field.",
+        "business_impact": "Users asking for a single operational state will miss records because the same concept is represented in multiple ways."
+      },
+      {
+        "issue_id": "val1_unlabeled",
+        "column_name": "val1",
+        "severity": "critical",
+        "category": "column_naming",
+        "problem_description": "Column `val1` has no meaningful business label.",
+        "business_impact": "AI BI tools cannot reason reliably about ambiguous field names, so this column will be skipped, misunderstood, or hallucinated around."
+      },
+      {
+        "issue_id": "enrollment_date_date_text",
+        "column_name": "enrollment_date",
+        "severity": "high",
+        "category": "date_handling",
+        "problem_description": "Column `enrollment_date` looks like a date field but is stored as free-form text.",
+        "business_impact": "Date filters, time-series trends, and comparison logic can silently fail when the platform cannot trust a field as a real date."
+      },
+      {
+        "issue_id": "revenue_negative_values",
+        "column_name": "revenue",
+        "severity": "medium",
+        "category": "business_logic",
+        "problem_description": "Column `revenue` contains a meaningful share of negative values.",
+        "business_impact": "Negative measures may be valid refunds or they may be sign errors. Either way, they need an explicit business rule before stakeholders trust the metric."
+      }
+    ],
+    "generator": "deterministic"
+  },
+  "remediation": {
+    "fixes": [
+      {
+        "issue_id": "student_status_status_chaos",
+        "priority": 1,
+        "plain_english_fix": "Map all status variants into a single controlled vocabulary before exposing the field to business users.",
+        "sql_snippet": "CASE WHEN LOWER(TRIM(student_status)) IN ('active', '1', 'yes', 'true', 'enrolled') THEN 'active' ELSE LOWER(TRIM(student_status)) END AS student_status_normalized",
+        "python_snippet": "df['student_status'] = df['student_status'].astype(str).str.strip().str.lower().replace({'1': 'active', 'yes': 'active', 'true': 'active', 'enrolled': 'active'})"
+      },
+      {
+        "issue_id": "val1_unlabeled",
+        "priority": 2,
+        "plain_english_fix": "Rename the field to a business-meaningful label and update downstream models to use the canonical name.",
+        "sql_snippet": "ALTER TABLE your_table RENAME COLUMN val1 TO business_meaningful_name;",
+        "python_snippet": "df = df.rename(columns={'val1': 'business_meaningful_name'})"
+      },
+      {
+        "issue_id": "enrollment_date_date_text",
+        "priority": 3,
+        "plain_english_fix": "Normalize the field into a real date or timestamp before semantic modeling so filters and trends behave predictably.",
+        "sql_snippet": "SELECT TO_DATE(enrollment_date, 'YYYY-MM-DD') AS enrollment_date_date FROM your_table;",
+        "python_snippet": "df['enrollment_date'] = pd.to_datetime(df['enrollment_date'], errors='coerce')"
+      },
+      {
+        "issue_id": "revenue_negative_values",
+        "priority": 4,
+        "plain_english_fix": "Decide whether negative values are legitimate exceptions or data errors, then encode that rule before reporting.",
+        "sql_snippet": "SELECT * FROM your_table WHERE revenue < 0;",
+        "python_snippet": "negative_revenue = df.loc[df['revenue'] < 0].copy()"
+      }
+    ],
+    "generator": "deterministic"
+  },
+  "report": {
+    "score": 40,
+    "grade": "F",
+    "confidence_level": "low",
+    "evidence_coverage": "csv_only",
+    "top_3_blockers": [
+      "Column `student_status` has too many distinct values for a status-like field.",
+      "Column `val1` has no meaningful business label.",
+      "Column `enrollment_date` looks like a date field but is stored as free-form text."
+    ],
+    "one_line_verdict": "Structural issues were found. This score is provisional because semantic references were not provided; add a dashboard or dictionary for higher-confidence validation.",
+    "score_computation": [
+      {
+        "issue_id": "student_status_status_chaos",
+        "deduction": 20,
+        "reason": "Column `student_status` has too many distinct values for a status-like field."
+      },
+      {
+        "issue_id": "val1_unlabeled",
+        "deduction": 20,
+        "reason": "Column `val1` has no meaningful business label."
+      },
+      {
+        "issue_id": "enrollment_date_date_text",
+        "deduction": 10,
+        "reason": "Column `enrollment_date` looks like a date field but is stored as free-form text."
+      },
+      {
+        "issue_id": "revenue_negative_values",
+        "deduction": 5,
+        "reason": "Column `revenue` contains a meaningful share of negative values."
+      }
+    ],
+    "generator": "deterministic"
+  },
+  "reasoning_trace": {
+    "path": "deterministic",
+    "validator": "deterministic",
+    "planner": "deterministic",
+    "scorer": "deterministic",
+    "note": "GEMINI_API_KEY not set."
+  }
+}

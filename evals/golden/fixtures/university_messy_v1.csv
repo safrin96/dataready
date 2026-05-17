@@ -1,0 +1,6 @@
+student_id,student_status,val1,enrollment_date,revenue,notes
+1,active,blue,2024-01-10,200,ready
+2,1,green,01/14/2024,-25,NULL
+3,yes,,2024/01/21,140,follow up
+4,enrolled,orange,14-02-2024,190,n/a
+5,TRUE,purple,2024-03-01,210,none

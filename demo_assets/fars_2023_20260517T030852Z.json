@@ -1,0 +1,1979 @@
+{
+  "request": {
+    "audit_mode": "semantic_audit",
+    "dataset_name": "fars_2023",
+    "dataset_format": "csv",
+    "includes_dashboard_image": true,
+    "includes_data_dictionary": true,
+    "compliance_mode": "standard",
+    "audit_context": null
+  },
+  "profiler": {
+    "dataset_fingerprint": "fars_2023:df23b13d19c46e79",
+    "profiling_mode": "multimodal",
+    "row_count_sampled": 10000,
+    "column_count": 80,
+    "multimodal_context_used": true,
+    "sampling_strategy": "head",
+    "sampling_detail": "Head sample: first 10,000 rows.",
+    "coverage_summary": "Sample rows: 10,000",
+    "columns": [
+      {
+        "name": "STATE",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 10,
+        "unique_ratio": 0.001,
+        "quality_flag": "clean",
+        "sample_values": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "STATENAME",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 10,
+        "unique_ratio": 0.001,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Alabama",
+          "Alabama",
+          "Alabama",
+          "Alabama",
+          "Alabama"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "ST_CASE",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 10000,
+        "unique_ratio": 1.0,
+        "quality_flag": "clean",
+        "sample_values": [
+          "10001",
+          "10002",
+          "10003",
+          "10004",
+          "10005"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "PEDS",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 7,
+        "unique_ratio": 0.0007,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "PERNOTMVIT",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 8,
+        "unique_ratio": 0.0008,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "VE_TOTAL",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 12,
+        "unique_ratio": 0.0012,
+        "quality_flag": "clean",
+        "sample_values": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "VE_FORMS",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 10,
+        "unique_ratio": 0.001,
+        "quality_flag": "clean",
+        "sample_values": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "PVH_INVL",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 9,
+        "unique_ratio": 0.0009,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "PERSONS",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 20,
+        "unique_ratio": 0.002,
+        "quality_flag": "clean",
+        "sample_values": [
+          "1",
+          "1",
+          "1",
+          "3",
+          "4"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "PERMVIT",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 20,
+        "unique_ratio": 0.002,
+        "quality_flag": "clean",
+        "sample_values": [
+          "1",
+          "1",
+          "1",
+          "3",
+          "4"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "COUNTY",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 89,
+        "unique_ratio": 0.0089,
+        "quality_flag": "clean",
+        "sample_values": [
+          "13",
+          "97",
+          "89",
+          "53",
+          "3"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "COUNTYNAME",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 351,
+        "unique_ratio": 0.0351,
+        "quality_flag": "clean",
+        "sample_values": [
+          "BUTLER (13)",
+          "MOBILE (97)",
+          "MADISON (89)",
+          "ESCAMBIA (53)",
+          "BALDWIN (3)"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "CITY",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 730,
+        "unique_ratio": 0.073,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "CITYNAME",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0002,
+        "raw_null_pct": 0.0,
+        "unique_count": 1030,
+        "unique_ratio": 0.103,
+        "quality_flag": "clean",
+        "sample_values": [
+          "NOT APPLICABLE",
+          "NOT APPLICABLE",
+          "NOT APPLICABLE",
+          "NOT APPLICABLE",
+          "NOT APPLICABLE"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "MONTH",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 12,
+        "unique_ratio": 0.0012,
+        "quality_flag": "clean",
+        "sample_values": [
+          "1",
+          "3",
+          "3",
+          "3",
+          "3"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "MONTHNAME",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 12,
+        "unique_ratio": 0.0012,
+        "quality_flag": "clean",
+        "sample_values": [
+          "January",
+          "March",
+          "March",
+          "March",
+          "March"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "DAY",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 31,
+        "unique_ratio": 0.0031,
+        "quality_flag": "clean",
+        "sample_values": [
+          "4",
+          "20",
+          "18",
+          "17",
+          "17"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "DAYNAME",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 31,
+        "unique_ratio": 0.0031,
+        "quality_flag": "clean",
+        "sample_values": [
+          "4",
+          "20",
+          "18",
+          "17",
+          "17"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "DAY_WEEK",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 7,
+        "unique_ratio": 0.0007,
+        "quality_flag": "clean",
+        "sample_values": [
+          "4",
+          "2",
+          "7",
+          "6",
+          "6"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "DAY_WEEKNAME",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 7,
+        "unique_ratio": 0.0007,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Wednesday",
+          "Monday",
+          "Saturday",
+          "Friday",
+          "Friday"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "YEAR",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 1,
+        "unique_ratio": 0.0001,
+        "quality_flag": "warning",
+        "sample_values": [
+          "2023",
+          "2023",
+          "2023",
+          "2023",
+          "2023"
+        ],
+        "quality_reason": "Column has little or no value variation.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "HOUR",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 25,
+        "unique_ratio": 0.0025,
+        "quality_flag": "clean",
+        "sample_values": [
+          "22",
+          "2",
+          "22",
+          "19",
+          "14"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "HOURNAME",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 25,
+        "unique_ratio": 0.0025,
+        "quality_flag": "clean",
+        "sample_values": [
+          "10:00pm-10:59pm",
+          "2:00am-2:59am",
+          "10:00pm-10:59pm",
+          "7:00pm-7:59pm",
+          "2:00pm-2:59pm"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "MINUTE",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 61,
+        "unique_ratio": 0.0061,
+        "quality_flag": "clean",
+        "sample_values": [
+          "20",
+          "0",
+          "56",
+          "0",
+          "55"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "MINUTENAME",
+        "declared_type": "object",
+        "detected_type": "numeric_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 61,
+        "unique_ratio": 0.0061,
+        "quality_flag": "warning",
+        "sample_values": [
+          "20",
+          "0",
+          "56",
+          "0",
+          "55"
+        ],
+        "quality_reason": "Values look numeric but the column is stored as text.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "TWAY_ID",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0013,
+        "raw_null_pct": 0.0,
+        "unique_count": 5042,
+        "unique_ratio": 0.5049,
+        "quality_flag": "clean",
+        "sample_values": [
+          "US-31 SR-3",
+          "CR-BOE RD",
+          "CR-GURLEY PIKE",
+          "CR-ROCK CREEK RD",
+          "I-65"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "TWAY_ID2",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.7241,
+        "raw_null_pct": 0.7237,
+        "unique_count": 2521,
+        "unique_ratio": 0.9137,
+        "quality_flag": "warning",
+        "sample_values": [
+          "MCQUEEN SMITH RD",
+          "FARMVILLE RD",
+          "JOHNSON RD S",
+          "WALLS DR",
+          "GENERAL GERALD WATSON WAY"
+        ],
+        "quality_reason": "Column has a meaningful rate of null or null-like values.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "ROUTE",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 12,
+        "unique_ratio": 0.0012,
+        "quality_flag": "clean",
+        "sample_values": [
+          "2",
+          "4",
+          "4",
+          "4",
+          "1"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "ROUTENAME",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 12,
+        "unique_ratio": 0.0012,
+        "quality_flag": "clean",
+        "sample_values": [
+          "U.S. Highway",
+          "County",
+          "County",
+          "County",
+          "Interstate"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "RUR_URB",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 5,
+        "unique_ratio": 0.0005,
+        "quality_flag": "clean",
+        "sample_values": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "RUR_URBNAME",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.001,
+        "raw_null_pct": 0.0,
+        "unique_count": 4,
+        "unique_ratio": 0.0004,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Rural",
+          "Rural",
+          "Rural",
+          "Rural",
+          "Rural"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "FUNC_SYS",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 10,
+        "unique_ratio": 0.001,
+        "quality_flag": "clean",
+        "sample_values": [
+          "5",
+          "7",
+          "5",
+          "7",
+          "1"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "FUNC_SYSNAME",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.001,
+        "raw_null_pct": 0.0,
+        "unique_count": 9,
+        "unique_ratio": 0.0009,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Major Collector",
+          "Local",
+          "Major Collector",
+          "Local",
+          "Interstate"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "RD_OWNER",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 21,
+        "unique_ratio": 0.0021,
+        "quality_flag": "clean",
+        "sample_values": [
+          "1",
+          "2",
+          "2",
+          "2",
+          "1"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "RD_OWNERNAME",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0012,
+        "raw_null_pct": 0.0,
+        "unique_count": 20,
+        "unique_ratio": 0.002,
+        "quality_flag": "clean",
+        "sample_values": [
+          "State Highway Agency",
+          "County Highway Agency",
+          "County Highway Agency",
+          "County Highway Agency",
+          "State Highway Agency"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "NHS",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 3,
+        "unique_ratio": 0.0003,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "NHSNAME",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 3,
+        "unique_ratio": 0.0003,
+        "quality_flag": "clean",
+        "sample_values": [
+          "This Section IS NOT on the NHS",
+          "This Section IS NOT on the NHS",
+          "This Section IS NOT on the NHS",
+          "This Section IS NOT on the NHS",
+          "This Section IS ON the NHS"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "SP_JUR",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 6,
+        "unique_ratio": 0.0006,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "SP_JURNAME",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0018,
+        "raw_null_pct": 0.0,
+        "unique_count": 5,
+        "unique_ratio": 0.0005,
+        "quality_flag": "clean",
+        "sample_values": [
+          "No Special Jurisdiction",
+          "No Special Jurisdiction",
+          "No Special Jurisdiction",
+          "No Special Jurisdiction",
+          "No Special Jurisdiction"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "MILEPT",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 1384,
+        "unique_ratio": 0.1384,
+        "quality_flag": "clean",
+        "sample_values": [
+          "1463",
+          "0",
+          "0",
+          "0",
+          "459"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "MILEPTNAME",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.1639,
+        "raw_null_pct": 0.1489,
+        "unique_count": 1382,
+        "unique_ratio": 0.1653,
+        "quality_flag": "clean",
+        "sample_values": [
+          "1463",
+          "459",
+          "372",
+          "1301",
+          "197"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "LATITUDE",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 9926,
+        "unique_ratio": 0.9926,
+        "quality_flag": "warning",
+        "sample_values": [
+          "31.927975",
+          "30.50874444",
+          "34.73833333",
+          "31.01478056",
+          "31.02740556"
+        ],
+        "quality_reason": "Column behaves more like a high-cardinality text field than a stable dimension.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "LATITUDENAME",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 9926,
+        "unique_ratio": 0.9926,
+        "quality_flag": "warning",
+        "sample_values": [
+          "31.927975",
+          "30.50874444",
+          "34.73833333",
+          "31.01478056",
+          "31.02740556"
+        ],
+        "quality_reason": "Column behaves more like a high-cardinality text field than a stable dimension.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "LONGITUD",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 9919,
+        "unique_ratio": 0.9919,
+        "quality_flag": "warning",
+        "sample_values": [
+          "-86.53883333",
+          "-88.27321389",
+          "-86.375825",
+          "-86.74669444",
+          "-87.6438"
+        ],
+        "quality_reason": "Column behaves more like a high-cardinality text field than a stable dimension.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "LONGITUDNAME",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 9919,
+        "unique_ratio": 0.9919,
+        "quality_flag": "warning",
+        "sample_values": [
+          "-86.53883333",
+          "-88.27321389",
+          "-86.375825",
+          "-86.74669444",
+          "-87.6438"
+        ],
+        "quality_reason": "Column behaves more like a high-cardinality text field than a stable dimension.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "HARM_EV",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 50,
+        "unique_ratio": 0.005,
+        "quality_flag": "clean",
+        "sample_values": [
+          "1",
+          "42",
+          "35",
+          "11",
+          "42"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "HARM_EVNAME",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 50,
+        "unique_ratio": 0.005,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Rollover/Overturn",
+          "Tree (Standing Only)",
+          "Embankment",
+          "Live Animal",
+          "Tree (Standing Only)"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "MAN_COLL",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 10,
+        "unique_ratio": 0.001,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "MAN_COLLNAME",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 10,
+        "unique_ratio": 0.001,
+        "quality_flag": "clean",
+        "sample_values": [
+          "The First Harmful Event was Not a Collision with a Motor Vehicle in Transport",
+          "The First Harmful Event was Not a Collision with a Motor Vehicle in Transport",
+          "The First Harmful Event was Not a Collision with a Motor Vehicle in Transport",
+          "The First Harmful Event was Not a Collision with a Motor Vehicle in Transport",
+          "The First Harmful Event was Not a Collision with a Motor Vehicle in Transport"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "RELJCT1",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 4,
+        "unique_ratio": 0.0004,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "RELJCT1NAME",
+        "declared_type": "object",
+        "detected_type": "boolean_like_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 4,
+        "unique_ratio": 0.0004,
+        "quality_flag": "clean",
+        "sample_values": [
+          "No",
+          "No",
+          "No",
+          "No",
+          "No"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "RELJCT2",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 15,
+        "unique_ratio": 0.0015,
+        "quality_flag": "clean",
+        "sample_values": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "RELJCT2NAME",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 15,
+        "unique_ratio": 0.0015,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Non-Junction",
+          "Non-Junction",
+          "Non-Junction",
+          "Non-Junction",
+          "Non-Junction"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "TYP_INT",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 11,
+        "unique_ratio": 0.0011,
+        "quality_flag": "clean",
+        "sample_values": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "TYP_INTNAME",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 11,
+        "unique_ratio": 0.0011,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Not an Intersection",
+          "Not an Intersection",
+          "Not an Intersection",
+          "Not an Intersection",
+          "Not an Intersection"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "REL_ROAD",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 13,
+        "unique_ratio": 0.0013,
+        "quality_flag": "clean",
+        "sample_values": [
+          "4",
+          "4",
+          "4",
+          "4",
+          "4"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "REL_ROADNAME",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 13,
+        "unique_ratio": 0.0013,
+        "quality_flag": "clean",
+        "sample_values": [
+          "On Roadside",
+          "On Roadside",
+          "On Roadside",
+          "On Roadside",
+          "On Roadside"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "WRK_ZONE",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 5,
+        "unique_ratio": 0.0005,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "WRK_ZONENAME",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.9779,
+        "raw_null_pct": 0.9779,
+        "unique_count": 4,
+        "unique_ratio": 0.0181,
+        "quality_flag": "critical",
+        "sample_values": [
+          "Construction",
+          "Construction",
+          "Construction",
+          "Construction",
+          "Utility"
+        ],
+        "quality_reason": "Column is effectively empty for most rows.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "LGT_COND",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 8,
+        "unique_ratio": 0.0008,
+        "quality_flag": "clean",
+        "sample_values": [
+          "2",
+          "2",
+          "2",
+          "2",
+          "1"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "LGT_CONDNAME",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 8,
+        "unique_ratio": 0.0008,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Dark - Not Lighted",
+          "Dark - Not Lighted",
+          "Dark - Not Lighted",
+          "Dark - Not Lighted",
+          "Daylight"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "WEATHER",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 13,
+        "unique_ratio": 0.0013,
+        "quality_flag": "clean",
+        "sample_values": [
+          "1",
+          "1",
+          "1",
+          "2",
+          "2"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "WEATHERNAME",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 13,
+        "unique_ratio": 0.0013,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Clear",
+          "Clear",
+          "Clear",
+          "Rain",
+          "Rain"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "SCH_BUS",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 2,
+        "unique_ratio": 0.0002,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "SCH_BUSNAME",
+        "declared_type": "object",
+        "detected_type": "boolean_like_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 2,
+        "unique_ratio": 0.0002,
+        "quality_flag": "clean",
+        "sample_values": [
+          "No",
+          "No",
+          "No",
+          "No",
+          "No"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "RAIL",
+        "declared_type": "object",
+        "detected_type": "numeric_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 37,
+        "unique_ratio": 0.0037,
+        "quality_flag": "warning",
+        "sample_values": [
+          "0000000",
+          "0000000",
+          "0000000",
+          "0000000",
+          "0000000"
+        ],
+        "quality_reason": "Values look numeric but the column is stored as text.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "RAILNAME",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0001,
+        "raw_null_pct": 0.0,
+        "unique_count": 36,
+        "unique_ratio": 0.0036,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Not Applicable",
+          "Not Applicable",
+          "Not Applicable",
+          "Not Applicable",
+          "Not Applicable"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "NOT_HOUR",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 26,
+        "unique_ratio": 0.0026,
+        "quality_flag": "clean",
+        "sample_values": [
+          "22",
+          "2",
+          "22",
+          "19",
+          "14"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "NOT_HOURNAME",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.5222,
+        "raw_null_pct": 0.0,
+        "unique_count": 25,
+        "unique_ratio": 0.0052,
+        "quality_flag": "warning",
+        "sample_values": [
+          "10:00pm-10:59pm",
+          "2:00am-2:59am",
+          "10:00pm-10:59pm",
+          "7:00pm-7:59pm",
+          "2:00pm-2:59pm"
+        ],
+        "quality_reason": "Column has a meaningful rate of null or null-like values.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "NOT_MIN",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 63,
+        "unique_ratio": 0.0063,
+        "quality_flag": "clean",
+        "sample_values": [
+          "20",
+          "8",
+          "48",
+          "0",
+          "53"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "NOT_MINNAME",
+        "declared_type": "object",
+        "detected_type": "numeric_text",
+        "null_pct": 0.6172,
+        "raw_null_pct": 0.0,
+        "unique_count": 62,
+        "unique_ratio": 0.0162,
+        "quality_flag": "warning",
+        "sample_values": [
+          "20",
+          "8",
+          "48",
+          "0",
+          "53"
+        ],
+        "quality_reason": "Values look numeric but the column is stored as text.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "ARR_HOUR",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 26,
+        "unique_ratio": 0.0026,
+        "quality_flag": "clean",
+        "sample_values": [
+          "22",
+          "2",
+          "23",
+          "19",
+          "15"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "ARR_HOURNAME",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 26,
+        "unique_ratio": 0.0026,
+        "quality_flag": "clean",
+        "sample_values": [
+          "10:00pm-10:59pm",
+          "2:00am-2:59am",
+          "11:00pm-11:59pm",
+          "7:00pm-7:59pm",
+          "3:00pm-3:59pm"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "ARR_MIN",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 64,
+        "unique_ratio": 0.0064,
+        "quality_flag": "clean",
+        "sample_values": [
+          "45",
+          "23",
+          "8",
+          "44",
+          "8"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "ARR_MINNAME",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 64,
+        "unique_ratio": 0.0064,
+        "quality_flag": "clean",
+        "sample_values": [
+          "45",
+          "23",
+          "8",
+          "44",
+          "8"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "HOSP_HR",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 26,
+        "unique_ratio": 0.0026,
+        "quality_flag": "clean",
+        "sample_values": [
+          "88",
+          "88",
+          "88",
+          "99",
+          "99"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "HOSP_HRNAME",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.4873,
+        "raw_null_pct": 0.0,
+        "unique_count": 25,
+        "unique_ratio": 0.0049,
+        "quality_flag": "warning",
+        "sample_values": [
+          "Not Applicable (Not Transported)",
+          "Not Applicable (Not Transported)",
+          "Not Applicable (Not Transported)",
+          "6:00am-6:59am",
+          "Not Applicable (Not Transported)"
+        ],
+        "quality_reason": "Column has a meaningful rate of null or null-like values.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "HOSP_MN",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 64,
+        "unique_ratio": 0.0064,
+        "quality_flag": "clean",
+        "sample_values": [
+          "88",
+          "88",
+          "88",
+          "99",
+          "99"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "HOSP_MNNAME",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 64,
+        "unique_ratio": 0.0064,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Not Applicable (Not Transported)",
+          "Not Applicable (Not Transported)",
+          "Not Applicable (Not Transported)",
+          "Unknown EMS Hospital Arrival Time",
+          "Unknown EMS Hospital Arrival Time"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "FATALS",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 6,
+        "unique_ratio": 0.0006,
+        "quality_flag": "clean",
+        "sample_values": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      }
+    ],
+    "cross_modal_findings": [
+      {
+        "type": "dashboard_context_attached",
+        "severity": "low",
+        "summary": "Dashboard context was attached and is preserved for the multimodal profiler path."
+      },
+      {
+        "type": "dictionary_context_attached",
+        "severity": "low",
+        "summary": "Data dictionary context was attached and is preserved for semantic cross-checking."
+      },
+      {
+        "type": "multimodal_path_deferred",
+        "severity": "low",
+        "summary": "Multimodal context is attached, but the advanced Gemini cross-check path is not active in this environment."
+      }
+    ],
+    "schema_quality_score": 0.9425
+  },
+  "issues": {
+    "issues": [
+      {
+        "issue_id": "COUNTYNAME_mixed_content",
+        "column_name": "COUNTYNAME",
+        "severity": "medium",
+        "category": "semantic_consistency",
+        "problem_description": "Column `COUNTYNAME` contains both the county name and its corresponding code (e.g., 'BUTLER (13)'), which can lead to redundancy and parsing issues.",
+        "business_impact": "Mixing descriptive names with codes in a single dimension can confuse users and complicate filtering or grouping operations in a semantic model. It may also lead to inconsistent data representation."
+      },
+      {
+        "issue_id": "CITYNAME_placeholder_values",
+        "column_name": "CITYNAME",
+        "severity": "low",
+        "category": "completeness",
+        "problem_description": "Column `CITYNAME` contains 'NOT APPLICABLE' values, which may indicate missing or undefined data rather than a meaningful category.",
+        "business_impact": "Placeholder values like 'NOT APPLICABLE' can dilute the quality of categorical analysis and may need to be treated as nulls or filtered out for accurate reporting."
+      },
+      {
+        "issue_id": "DAYNAME_misleading_name",
+        "column_name": "DAYNAME",
+        "severity": "medium",
+        "category": "semantic_consistency",
+        "problem_description": "Column `DAYNAME` is detected as an integer and contains day numbers, not names, which is inconsistent with its name and the presence of `DAY_WEEKNAME`.",
+        "business_impact": "Misleading column names can cause confusion for users and lead to incorrect interpretations or usage in a semantic model. It suggests a need for renaming or clarification."
+      },
+      {
+        "issue_id": "YEAR_single_value",
+        "column_name": "YEAR",
+        "severity": "low",
+        "category": "data_utility",
+        "problem_description": "Column `YEAR` has only one unique value (2023) across the entire sample, indicating it provides no analytical variation.",
+        "business_impact": "A column with a single unique value offers no utility for analysis, filtering, or grouping in a semantic model and can be considered redundant."
+      },
+      {
+        "issue_id": "MINUTENAME_numeric_as_text",
+        "column_name": "MINUTENAME",
+        "severity": "medium",
+        "category": "data_type_mismatch",
+        "problem_description": "Column `MINUTENAME` contains numeric values but is stored as a text type, preventing direct numerical operations or proper sorting.",
+        "business_impact": "Storing numeric data as text hinders quantitative analysis and can lead to incorrect sorting or filtering in a semantic model. It requires type conversion for proper use."
+      },
+      {
+        "issue_id": "TWAY_ID2_free_text_dimension",
+        "column_name": "TWAY_ID2",
+        "severity": "medium",
+        "category": "modeling_risk",
+        "problem_description": "Column `TWAY_ID2` has a very high null percentage (72.41%) and behaves more like free text than a stable dimension due to its high cardinality.",
+        "business_impact": "High-cardinality text fields with significant missing values add noise to semantic layers, perform poorly as filterable business dimensions, and can lead to incomplete analysis."
+      },
+      {
+        "issue_id": "MILEPTNAME_high_null_pct",
+        "column_name": "MILEPTNAME",
+        "severity": "medium",
+        "category": "completeness",
+        "problem_description": "Column `MILEPTNAME` has a significant null percentage (16.39%), which can lead to incomplete analysis.",
+        "business_impact": "A high rate of missing values in a dimension can lead to incomplete or biased insights, making it difficult to perform comprehensive analysis or filtering."
+      },
+      {
+        "issue_id": "MILEPTNAME_numeric_as_text",
+        "column_name": "MILEPTNAME",
+        "severity": "low",
+        "category": "data_type_mismatch",
+        "problem_description": "Column `MILEPTNAME` contains numeric values but is stored as a free text type, preventing direct numerical operations or proper sorting.",
+        "business_impact": "Storing numeric data as text hinders quantitative analysis and can lead to incorrect sorting or filtering in a semantic model. It requires type conversion for proper use."
+      },
+      {
+        "issue_id": "LATITUDE_high_cardinality",
+        "column_name": "LATITUDE",
+        "severity": "low",
+        "category": "modeling_risk",
+        "problem_description": "Column `LATITUDE` has a very high unique ratio (0.9926), making it behave more like a unique identifier or a measure than a stable dimension.",
+        "business_impact": "High-cardinality fields are generally unsuitable as direct dimensions in a semantic model as they can lead to overly granular analysis and performance issues. They are better suited as attributes or for geospatial analysis."
+      },
+      {
+        "issue_id": "LATITUDENAME_high_cardinality",
+        "column_name": "LATITUDENAME",
+        "severity": "low",
+        "category": "modeling_risk",
+        "problem_description": "Column `LATITUDENAME` has a very high unique ratio (0.9926), making it behave more like a unique identifier or a measure than a stable dimension.",
+        "business_impact": "High-cardinality fields are generally unsuitable as direct dimensions in a semantic model as they can lead to overly granular analysis and performance issues. They are better suited as attributes or for geospatial analysis."
+      },
+      {
+        "issue_id": "LATITUDENAME_misleading_name",
+        "column_name": "LATITUDENAME",
+        "severity": "medium",
+        "category": "semantic_consistency",
+        "problem_description": "Column `LATITUDENAME` is detected as a float and contains latitude values, which is inconsistent with its name suggesting a descriptive name.",
+        "business_impact": "Misleading column names can cause confusion for users and lead to incorrect interpretations or usage in a semantic model. It suggests a need for renaming or clarification."
+      },
+      {
+        "issue_id": "LONGITUD_high_cardinality",
+        "column_name": "LONGITUD",
+        "severity": "low",
+        "category": "modeling_risk",
+        "problem_description": "Column `LONGITUD` has a very high unique ratio (0.9919), making it behave more like a unique identifier or a measure than a stable dimension.",
+        "business_impact": "High-cardinality fields are generally unsuitable as direct dimensions in a semantic model as they can lead to overly granular analysis and performance issues. They are better suited as attributes or for geospatial analysis."
+      },
+      {
+        "issue_id": "LONGITUDNAME_high_cardinality",
+        "column_name": "LONGITUDNAME",
+        "severity": "low",
+        "category": "modeling_risk",
+        "problem_description": "Column `LONGITUDNAME` has a very high unique ratio (0.9919), making it behave more like a unique identifier or a measure than a stable dimension.",
+        "business_impact": "High-cardinality fields are generally unsuitable as direct dimensions in a semantic model as they can lead to overly granular analysis and performance issues. They are better suited as attributes or for geospatial analysis."
+      },
+      {
+        "issue_id": "LONGITUDNAME_misleading_name",
+        "column_name": "LONGITUDNAME",
+        "severity": "medium",
+        "category": "semantic_consistency",
+        "problem_description": "Column `LONGITUDNAME` is detected as a float and contains longitude values, which is inconsistent with its name suggesting a descriptive name.",
+        "business_impact": "Misleading column names can cause confusion for users and lead to incorrect interpretations or usage in a semantic model. It suggests a need for renaming or clarification."
+      },
+      {
+        "issue_id": "WRK_ZONENAME_mostly_null",
+        "column_name": "WRK_ZONENAME",
+        "severity": "critical",
+        "category": "completeness",
+        "problem_description": "Column `WRK_ZONENAME` is effectively empty for most rows, with a null percentage of 97.79%.",
+        "business_impact": "Sparse fields create misleading filters and noisy joins, and they rarely deserve a prominent place in a semantic model. Such high nullity renders the column almost useless for analysis."
+      },
+      {
+        "issue_id": "RAIL_numeric_as_text",
+        "column_name": "RAIL",
+        "severity": "medium",
+        "category": "data_type_mismatch",
+        "problem_description": "Column `RAIL` contains numeric values (e.g., '0000000') but is stored as a text type, preventing direct numerical operations or proper sorting.",
+        "business_impact": "Storing numeric data as text hinders quantitative analysis and can lead to incorrect sorting or filtering in a semantic model. It requires type conversion for proper use."
+      },
+      {
+        "issue_id": "NOT_HOURNAME_high_null_pct",
+        "column_name": "NOT_HOURNAME",
+        "severity": "medium",
+        "category": "completeness",
+        "problem_description": "Column `NOT_HOURNAME` has a significant null percentage (52.22%), which can lead to incomplete analysis.",
+        "business_impact": "A high rate of missing values in a dimension can lead to incomplete or biased insights, making it difficult to perform comprehensive analysis or filtering."
+      },
+      {
+        "issue_id": "NOT_MINNAME_high_null_pct_numeric_as_text",
+        "column_name": "NOT_MINNAME",
+        "severity": "critical",
+        "category": "completeness_and_data_type_mismatch",
+        "problem_description": "Column `NOT_MINNAME` has a very high null percentage (61.72%) and contains numeric values stored as text, hindering both completeness and analytical utility.",
+        "business_impact": "A high rate of missing values combined with a data type mismatch severely limits the column's usefulness for analysis, filtering, and accurate reporting in a semantic model."
+      },
+      {
+        "issue_id": "HOSP_HRNAME_high_null_pct",
+        "column_name": "HOSP_HRNAME",
+        "severity": "medium",
+        "category": "completeness",
+        "problem_description": "Column `HOSP_HRNAME` has a significant null percentage (48.73%), which can lead to incomplete analysis.",
+        "business_impact": "A high rate of missing values in a dimension can lead to incomplete or biased insights, making it difficult to perform comprehensive analysis or filtering."
+      }
+    ],
+    "generator": "llm_refined"
+  },
+  "remediation": {
+    "fixes": [
+      {
+        "issue_id": "NOT_MINNAME_high_null_pct_numeric_as_text",
+        "priority": 1,
+        "plain_english_fix": "Convert the 'NOT_MINNAME' column to a numeric type and handle missing values by treating them as NULL or a specific placeholder.",
+        "sql_snippet": "SELECT CASE WHEN NOT_MINNAME ~ '^[0-9]+$' THEN CAST(NOT_MINNAME AS INT) ELSE NULL END AS NOT_MIN_CLEAN FROM your_table;",
+        "python_snippet": "df['NOT_MIN_CLEAN'] = pd.to_numeric(df['NOT_MINNAME'], errors='coerce').astype('Int64')"
+      },
+      {
+        "issue_id": "COUNTYNAME_mixed_content",
+        "priority": 2,
+        "plain_english_fix": "Extract only the county name from the 'COUNTYNAME' column by removing the parenthesized code.",
+        "sql_snippet": "SELECT REGEXP_REPLACE(COUNTYNAME, ' \\(\\d+\\)', '') AS COUNTYNAME_CLEAN FROM your_table;",
+        "python_snippet": "df['COUNTYNAME_CLEAN'] = df['COUNTYNAME'].str.replace(r' \\(\\d+\\)', '', regex=True)"
+      },
+      {
+        "issue_id": "WRK_ZONENAME_mostly_null",
+        "priority": 3,
+        "plain_english_fix": "Either remove this field from the semantic layer or document exactly why it is empty so it does not appear as a trusted attribute.",
+        "sql_snippet": "SELECT WRK_ZONENAME FROM your_table WHERE WRK_ZONENAME IS NOT NULL LIMIT 50;",
+        "python_snippet": "df = df.loc[df['WRK_ZONENAME'].notna()].copy()"
+      },
+      {
+        "issue_id": "TWAY_ID2_free_text_dimension",
+        "priority": 4,
+        "plain_english_fix": "Keep this field out of the primary semantic model unless you intentionally want a high-cardinality text search surface.",
+        "sql_snippet": "SELECT TWAY_ID2 FROM your_table LIMIT 100;",
+        "python_snippet": "df['TWAY_ID2'] = df['TWAY_ID2'].astype(str)"
+      },
+      {
+        "issue_id": "DAYNAME_misleading_name",
+        "priority": 5,
+        "plain_english_fix": "Rename 'DAYNAME' to 'DAY_OF_MONTH_NUMERIC' to accurately reflect its content, or remove if 'DAY' is sufficient.",
+        "sql_snippet": "SELECT DAYNAME AS DAY_OF_MONTH_NUMERIC, other_columns FROM your_table;",
+        "python_snippet": "df.rename(columns={'DAYNAME': 'DAY_OF_MONTH_NUMERIC'}, inplace=True)"
+      },
+      {
+        "issue_id": "MINUTENAME_numeric_as_text",
+        "priority": 6,
+        "plain_english_fix": "Convert the 'MINUTENAME' column to an integer type for proper numerical operations.",
+        "sql_snippet": "SELECT CAST(MINUTENAME AS INT) AS MINUTE_NUMERIC FROM your_table;",
+        "python_snippet": "df['MINUTENAME_NUMERIC'] = pd.to_numeric(df['MINUTENAME'], errors='coerce').astype('Int64')"
+      },
+      {
+        "issue_id": "LATITUDENAME_misleading_name",
+        "priority": 7,
+        "plain_english_fix": "Rename 'LATITUDENAME' to 'LATITUDE_RAW' to clarify it holds numeric latitude values, not names, or remove if 'LATITUDE' is sufficient.",
+        "sql_snippet": "SELECT LATITUDENAME AS LATITUDE_RAW, other_columns FROM your_table;",
+        "python_snippet": "df.rename(columns={'LATITUDENAME': 'LATITUDE_RAW'}, inplace=True)"
+      },
+      {
+        "issue_id": "LONGITUDNAME_misleading_name",
+        "priority": 8,
+        "plain_english_fix": "Rename 'LONGITUDNAME' to 'LONGITUDE_RAW' to clarify it holds numeric longitude values, not names, or remove if 'LONGITUD' is sufficient.",
+        "sql_snippet": "SELECT LONGITUDNAME AS LONGITUDE_RAW, other_columns FROM your_table;",
+        "python_snippet": "df.rename(columns={'LONGITUDNAME': 'LONGITUDE_RAW'}, inplace=True)"
+      },
+      {
+        "issue_id": "RAIL_numeric_as_text",
+        "priority": 9,
+        "plain_english_fix": "Convert the 'RAIL' column to an integer type for proper numerical operations.",
+        "sql_snippet": "SELECT CAST(RAIL AS INT) AS RAIL_NUMERIC FROM your_table;",
+        "python_snippet": "df['RAIL_NUMERIC'] = pd.to_numeric(df['RAIL'], errors='coerce').astype('Int64')"
+      },
+      {
+        "issue_id": "NOT_HOURNAME_high_null_pct",
+        "priority": 10,
+        "plain_english_fix": "Investigate the cause of high nulls in 'NOT_HOURNAME'. Consider imputing missing values or treating them as an 'Unknown' category.",
+        "sql_snippet": "SELECT COALESCE(NOT_HOURNAME, 'Unknown') AS NOT_HOURNAME_CLEAN FROM your_table;",
+        "python_snippet": "df['NOT_HOURNAME_CLEAN'] = df['NOT_HOURNAME'].fillna('Unknown')"
+      },
+      {
+        "issue_id": "HOSP_HRNAME_high_null_pct",
+        "priority": 11,
+        "plain_english_fix": "Investigate the cause of high nulls in 'HOSP_HRNAME'. Consider imputing missing values or treating them as an 'Unknown' category.",
+        "sql_snippet": "SELECT COALESCE(HOSP_HRNAME, 'Unknown') AS HOSP_HRNAME_CLEAN FROM your_table;",
+        "python_snippet": "df['HOSP_HRNAME_CLEAN'] = df['HOSP_HRNAME'].fillna('Unknown')"
+      },
+      {
+        "issue_id": "CITYNAME_placeholder_values",
+        "priority": 12,
+        "plain_english_fix": "Replace 'NOT APPLICABLE' values in 'CITYNAME' with actual NULLs for clearer representation of missing data.",
+        "sql_snippet": "SELECT NULLIF(CITYNAME, 'NOT APPLICABLE') AS CITYNAME_CLEAN FROM your_table;",
+        "python_snippet": "df['CITYNAME_CLEAN'] = df['CITYNAME'].replace('NOT APPLICABLE', pd.NA)"
+      },
+      {
+        "issue_id": "YEAR_single_value",
+        "priority": 13,
+        "plain_english_fix": "Consider removing the 'YEAR' column from the semantic model as it provides no analytical variation.",
+        "sql_snippet": "SELECT * EXCLUDE (YEAR) FROM your_table;",
+        "python_snippet": "df.drop(columns=['YEAR'], inplace=True)"
+      },
+      {
+        "issue_id": "MILEPTNAME_high_null_pct",
+        "priority": 14,
+        "plain_english_fix": "Investigate the cause of high nulls in 'MILEPTNAME'. Consider imputing missing values or treating them as an 'Unknown' category.",
+        "sql_snippet": "SELECT COALESCE(MILEPTNAME, 'Unknown') AS MILEPTNAME_CLEAN FROM your_table;",
+        "python_snippet": "df['MILEPTNAME_CLEAN'] = df['MILEPTNAME'].fillna('Unknown')"
+      },
+      {
+        "issue_id": "MILEPTNAME_numeric_as_text",
+        "priority": 15,
+        "plain_english_fix": "Convert the 'MILEPTNAME' column to a numeric type for proper numerical operations, handling non-numeric values.",
+        "sql_snippet": "SELECT CASE WHEN MILEPTNAME ~ '^[0-9]+$' THEN CAST(MILEPTNAME AS INT) ELSE NULL END AS MILEPTNAME_NUMERIC FROM your_table;",
+        "python_snippet": "df['MILEPTNAME_NUMERIC'] = pd.to_numeric(df['MILEPTNAME'], errors='coerce').astype('Int64')"
+      },
+      {
+        "issue_id": "LATITUDE_high_cardinality",
+        "priority": 16,
+        "plain_english_fix": "Treat 'LATITUDE' as a measure or attribute for geospatial analysis, rather than a direct dimension in a semantic model.",
+        "sql_snippet": "SELECT MIN(LATITUDE), MAX(LATITUDE), AVG(LATITUDE) FROM your_table;",
+        "python_snippet": "df['LATITUDE'] = pd.to_numeric(df['LATITUDE'], errors='coerce')"
+      },
+      {
+        "issue_id": "LATITUDENAME_high_cardinality",
+        "priority": 17,
+        "plain_english_fix": "Treat 'LATITUDENAME' as a measure or attribute for geospatial analysis, rather than a direct dimension in a semantic model.",
+        "sql_snippet": "SELECT MIN(LATITUDENAME), MAX(LATITUDENAME), AVG(LATITUDENAME) FROM your_table;",
+        "python_snippet": "df['LATITUDENAME'] = pd.to_numeric(df['LATITUDENAME'], errors='coerce')"
+      },
+      {
+        "issue_id": "LONGITUD_high_cardinality",
+        "priority": 18,
+        "plain_english_fix": "Treat 'LONGITUD' as a measure or attribute for geospatial analysis, rather than a direct dimension in a semantic model.",
+        "sql_snippet": "SELECT MIN(LONGITUD), MAX(LONGITUD), AVG(LONGITUD) FROM your_table;",
+        "python_snippet": "df['LONGITUD'] = pd.to_numeric(df['LONGITUD'], errors='coerce')"
+      },
+      {
+        "issue_id": "LONGITUDNAME_high_cardinality",
+        "priority": 19,
+        "plain_english_fix": "Treat 'LONGITUDNAME' as a measure or attribute for geospatial analysis, rather than a direct dimension in a semantic model.",
+        "sql_snippet": "SELECT MIN(LONGITUDNAME), MAX(LONGITUDNAME), AVG(LONGITUDNAME) FROM your_table;",
+        "python_snippet": "df['LONGITUDNAME'] = pd.to_numeric(df['LONGITUDNAME'], errors='coerce')"
+      }
+    ],
+    "generator": "llm_refined"
+  },
+  "report": {
+    "score": 20,
+    "grade": "F",
+    "confidence_level": "high",
+    "evidence_coverage": "csv_plus_dashboard_dictionary",
+    "top_3_blockers": [
+      "Column `WRK_ZONENAME` is effectively empty for most rows.",
+      "Column `NOT_MINNAME` has a very high null percentage and contains numeric values stored as text.",
+      "Column `TWAY_ID2` has a very high null percentage and behaves more like free text than a stable dimension."
+    ],
+    "one_line_verdict": "This semantic layer has numerous critical and medium issues, severely limiting its readiness for AI BI applications.",
+    "score_computation": [
+      {
+        "issue_id": "WRK_ZONENAME_mostly_null",
+        "deduction": 10,
+        "reason": "Column is effectively empty for most rows, rendering it almost useless for analysis."
+      },
+      {
+        "issue_id": "NOT_MINNAME_high_null_pct_numeric_as_text",
+        "deduction": 10,
+        "reason": "High null percentage combined with data type mismatch severely limits analytical utility."
+      },
+      {
+        "issue_id": "TWAY_ID2_free_text_dimension",
+        "deduction": 6,
+        "reason": "High null percentage and free text nature make it unsuitable as a stable dimension."
+      },
+      {
+        "issue_id": "DAYNAME_misleading_name",
+        "deduction": 5,
+        "reason": "Misleading column name causes confusion and incorrect usage."
+      },
+      {
+        "issue_id": "LATITUDENAME_misleading_name",
+        "deduction": 5,
+        "reason": "Misleading column name causes confusion and incorrect usage."
+      },
+      {
+        "issue_id": "LONGITUDNAME_misleading_name",
+        "deduction": 5,
+        "reason": "Misleading column name causes confusion and incorrect usage."
+      },
+      {
+        "issue_id": "COUNTYNAME_mixed_content",
+        "deduction": 4,
+        "reason": "Mixing descriptive names with codes complicates analysis and filtering."
+      },
+      {
+        "issue_id": "MINUTENAME_numeric_as_text",
+        "deduction": 4,
+        "reason": "Numeric values stored as text hinder quantitative analysis and sorting."
+      },
+      {
+        "issue_id": "MILEPTNAME_high_null_pct",
+        "deduction": 4,
+        "reason": "Significant null percentage leads to incomplete or biased insights."
+      },
+      {
+        "issue_id": "RAIL_numeric_as_text",
+        "deduction": 4,
+        "reason": "Numeric values stored as text hinder quantitative analysis and sorting."
+      },
+      {
+        "issue_id": "NOT_HOURNAME_high_null_pct",
+        "deduction": 4,
+        "reason": "Significant null percentage leads to incomplete or biased insights."
+      },
+      {
+        "issue_id": "HOSP_HRNAME_high_null_pct",
+        "deduction": 4,
+        "reason": "Significant null percentage leads to incomplete or biased insights."
+      },
+      {
+        "issue_id": "CITYNAME_placeholder_values",
+        "deduction": 2,
+        "reason": "Placeholder values dilute categorical analysis."
+      },
+      {
+        "issue_id": "YEAR_single_value",
+        "deduction": 1,
+        "reason": "Column provides no analytical variation."
+      },
+      {
+        "issue_id": "MILEPTNAME_numeric_as_text",
+        "deduction": 2,
+        "reason": "Numeric values stored as text hinder quantitative analysis and sorting."
+      },
+      {
+        "issue_id": "LATITUDE_high_cardinality",
+        "deduction": 2,
+        "reason": "High cardinality makes it unsuitable as a direct dimension."
+      },
+      {
+        "issue_id": "LATITUDENAME_high_cardinality",
+        "deduction": 2,
+        "reason": "High cardinality makes it unsuitable as a direct dimension."
+      },
+      {
+        "issue_id": "LONGITUD_high_cardinality",
+        "deduction": 2,
+        "reason": "High cardinality makes it unsuitable as a direct dimension."
+      },
+      {
+        "issue_id": "LONGITUDNAME_high_cardinality",
+        "deduction": 2,
+        "reason": "High cardinality makes it unsuitable as a direct dimension."
+      }
+    ],
+    "generator": "llm_refined"
+  },
+  "business_audit": null,
+  "impact_map": null,
+  "fix_pack": null,
+  "dictionary": null,
+  "reconciliation": null,
+  "data_handling": null,
+  "reasoning_trace": {
+    "path": "gemini",
+    "validator": "llm",
+    "planner": "llm",
+    "scorer": "llm",
+    "note": "Gemini chain completed with partial fallback: validator=llm; planner=llm; scorer=llm"
+  }
+}

@@ -1,0 +1,1851 @@
+{
+  "request": {
+    "audit_mode": "semantic_audit",
+    "dataset_name": "nycdoe_2024",
+    "dataset_format": "csv",
+    "includes_dashboard_image": true,
+    "includes_data_dictionary": true,
+    "compliance_mode": "standard",
+    "audit_context": null
+  },
+  "profiler": {
+    "dataset_fingerprint": "nycdoe_2024:1068c1bdc7d7c604",
+    "profiling_mode": "multimodal",
+    "row_count_sampled": 1355,
+    "column_count": 70,
+    "multimodal_context_used": true,
+    "sampling_strategy": "head",
+    "sampling_detail": "Head sample: first 1,355 rows.",
+    "coverage_summary": "Sample rows: 1,355",
+    "columns": [
+      {
+        "name": "Unnamed: 0",
+        "declared_type": "float64",
+        "detected_type": "empty",
+        "null_pct": 1.0,
+        "raw_null_pct": 1.0,
+        "unique_count": 0,
+        "unique_ratio": 0.0,
+        "quality_flag": "critical",
+        "sample_values": [],
+        "quality_reason": "Column is effectively empty for most rows.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Unnamed: 1",
+        "declared_type": "float64",
+        "detected_type": "empty",
+        "null_pct": 1.0,
+        "raw_null_pct": 1.0,
+        "unique_count": 0,
+        "unique_ratio": 0.0,
+        "quality_flag": "critical",
+        "sample_values": [],
+        "quality_reason": "Column is effectively empty for most rows.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Unnamed: 2",
+        "declared_type": "float64",
+        "detected_type": "empty",
+        "null_pct": 1.0,
+        "raw_null_pct": 1.0,
+        "unique_count": 0,
+        "unique_ratio": 0.0,
+        "quality_flag": "critical",
+        "sample_values": [],
+        "quality_reason": "Column is effectively empty for most rows.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "DBN",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 1354,
+        "unique_ratio": 1.0,
+        "quality_flag": "warning",
+        "sample_values": [
+          "01M015",
+          "01M020",
+          "01M034",
+          "01M063",
+          "01M064"
+        ],
+        "quality_reason": "Column behaves more like a high-cardinality text field than a stable dimension.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "School Name",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 1352,
+        "unique_ratio": 0.9985,
+        "quality_flag": "warning",
+        "sample_values": [
+          "P.S. 015 Roberto Clemente",
+          "P.S. 020 Anna Silver",
+          "P.S. 034 Franklin D. Roosevelt",
+          "The STAR Academy - P.S.63",
+          "P.S. 064 Robert Simon"
+        ],
+        "quality_reason": "Column behaves more like a high-cardinality text field than a stable dimension.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "School Type",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 3,
+        "unique_ratio": 0.0022,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Elementary",
+          "Elementary",
+          "K-8",
+          "Elementary",
+          "Elementary"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Enrollment",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 697,
+        "unique_ratio": 0.5148,
+        "quality_flag": "clean",
+        "sample_values": [
+          "172.0",
+          "352.0",
+          "189.0",
+          "177.0",
+          "156.0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Impact Score",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0103,
+        "raw_null_pct": 0.0103,
+        "unique_count": 81,
+        "unique_ratio": 0.0604,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.56",
+          "0.28",
+          "0.52",
+          "0.36",
+          "0.42"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Performance Score",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0103,
+        "raw_null_pct": 0.0103,
+        "unique_count": 92,
+        "unique_ratio": 0.0686,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.54",
+          "0.36",
+          "0.29",
+          "0.37",
+          "0.39"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Instruction and Performance - Rating",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0103,
+        "raw_null_pct": 0.0103,
+        "unique_count": 4,
+        "unique_ratio": 0.003,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Good",
+          "Needs Improvement",
+          "Fair",
+          "Fair",
+          "Fair"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Safety and School Climate - Rating",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.1188,
+        "raw_null_pct": 0.1188,
+        "unique_count": 4,
+        "unique_ratio": 0.0034,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Good",
+          "Good",
+          "Fair",
+          "Fair",
+          "Fair"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Relationships with Families - Rating",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.1129,
+        "raw_null_pct": 0.1129,
+        "unique_count": 4,
+        "unique_ratio": 0.0033,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Excellent",
+          "Excellent",
+          "Good",
+          "Good",
+          "Excellent"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Instruction/Learning Environment - School Percent Positive",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.1181,
+        "raw_null_pct": 0.1181,
+        "unique_count": 46,
+        "unique_ratio": 0.0385,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.84",
+          "0.82",
+          "0.75",
+          "0.79",
+          "0.8"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Advising and Planning - School Percent Positive",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.262,
+        "raw_null_pct": 0.262,
+        "unique_count": 54,
+        "unique_ratio": 0.054,
+        "quality_flag": "warning",
+        "sample_values": [
+          "1.0",
+          "0.87",
+          "0.83",
+          "0.75",
+          "1.0"
+        ],
+        "quality_reason": "Column has a meaningful rate of null or null-like values.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Safety - School Percent Positive",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.1181,
+        "raw_null_pct": 0.1181,
+        "unique_count": 67,
+        "unique_ratio": 0.0561,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.69",
+          "0.68",
+          "0.5",
+          "0.76",
+          "0.72"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "School Leadership - School Percent Positive",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.1181,
+        "raw_null_pct": 0.1181,
+        "unique_count": 54,
+        "unique_ratio": 0.0452,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.91",
+          "0.92",
+          "0.82",
+          "0.73",
+          "0.83"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Student Support - School Percent Positive",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.1181,
+        "raw_null_pct": 0.1181,
+        "unique_count": 50,
+        "unique_ratio": 0.0418,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.91",
+          "0.94",
+          "0.67",
+          "0.84",
+          "0.8"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Teaching Environment - School Percent Positive",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.1181,
+        "raw_null_pct": 0.1181,
+        "unique_count": 55,
+        "unique_ratio": 0.046,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.93",
+          "0.92",
+          "0.84",
+          "0.78",
+          "0.87"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Communication - School Percent Positive",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.11,
+        "raw_null_pct": 0.11,
+        "unique_count": 23,
+        "unique_ratio": 0.0191,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.98",
+          "0.98",
+          "0.94",
+          "0.92",
+          "0.94"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Family Involvement - School Percent Positive",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.11,
+        "raw_null_pct": 0.11,
+        "unique_count": 36,
+        "unique_ratio": 0.0299,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.96",
+          "0.92",
+          "0.86",
+          "0.96",
+          "0.96"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Family-School Trust - School Percent Positive",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.11,
+        "raw_null_pct": 0.11,
+        "unique_count": 29,
+        "unique_ratio": 0.024,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.99",
+          "0.98",
+          "0.93",
+          "0.92",
+          "0.97"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Average Incoming ELA Proficiency (Based on 5th Grade)",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.7196,
+        "raw_null_pct": 0.7196,
+        "unique_count": 135,
+        "unique_ratio": 0.3553,
+        "quality_flag": "warning",
+        "sample_values": [
+          "2.56",
+          "2.44",
+          "2.76",
+          "2.75",
+          "3.5"
+        ],
+        "quality_reason": "Column has a meaningful rate of null or null-like values.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Average Incoming Math Proficiency (Based on 5th Grade)",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.7188,
+        "raw_null_pct": 0.7188,
+        "unique_count": 145,
+        "unique_ratio": 0.3806,
+        "quality_flag": "warning",
+        "sample_values": [
+          "2.17",
+          "2.21",
+          "2.58",
+          "2.55",
+          "3.5"
+        ],
+        "quality_reason": "Column has a meaningful rate of null or null-like values.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Percent Female",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 199,
+        "unique_ratio": 0.147,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.483",
+          "0.511",
+          "0.45",
+          "0.492",
+          "0.513"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Percent Male",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 197,
+        "unique_ratio": 0.1455,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.517",
+          "0.489",
+          "0.55",
+          "0.508",
+          "0.487"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Percent Neither Female nor Male",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 8,
+        "unique_ratio": 0.0059,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.0",
+          "0.0",
+          "0.0",
+          "0.0",
+          "0.0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Percent English Language Learners",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 442,
+        "unique_ratio": 0.3264,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.14",
+          "0.335",
+          "0.206",
+          "0.175",
+          "0.167"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Percent Students with IEPs",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 327,
+        "unique_ratio": 0.2415,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.256",
+          "0.207",
+          "0.296",
+          "0.367",
+          "0.359"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Percentage of students recommended for general ed settings with Special Ed Teacher Support Services (SETSS)",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 104,
+        "unique_ratio": 0.0768,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.0",
+          "0.043",
+          "0.011",
+          "0.0",
+          "0.0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Percentage of students recommended for Integrated Co-Teaching (ICT) services",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 271,
+        "unique_ratio": 0.2001,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.227",
+          "0.111",
+          "0.254",
+          "0.282",
+          "0.333"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Percentage of students recommended for Special Class (SC) services",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 205,
+        "unique_ratio": 0.1514,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.012",
+          "0.02",
+          "0.016",
+          "0.051",
+          "0.019"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Economic Need Index",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 472,
+        "unique_ratio": 0.3486,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.888",
+          "0.865",
+          "> 95%",
+          "0.839",
+          "0.922"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Percent in Temp Housing",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 389,
+        "unique_ratio": 0.2873,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.343",
+          "0.361",
+          "0.381",
+          "0.26",
+          "0.301"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Percent HRA Eligible",
+        "declared_type": "object",
+        "detected_type": "numeric_text",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 545,
+        "unique_ratio": 0.4025,
+        "quality_flag": "warning",
+        "sample_values": [
+          "0.797",
+          "0.778",
+          "0.868",
+          "0.774",
+          "0.833"
+        ],
+        "quality_reason": "Values look numeric but the column is stored as text.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Student Percent - Asian",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 381,
+        "unique_ratio": 0.2814,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.07",
+          "0.153",
+          "0.026",
+          "0.006",
+          "0.006"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Student Percent - Black",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 595,
+        "unique_ratio": 0.4394,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.227",
+          "0.151",
+          "0.381",
+          "0.158",
+          "0.199"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Student Percent - Hispanic",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 714,
+        "unique_ratio": 0.5273,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.581",
+          "0.594",
+          "0.561",
+          "0.74",
+          "0.744"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Student Percent - Native American",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 88,
+        "unique_ratio": 0.065,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.0",
+          "0.014",
+          "0.0",
+          "0.0",
+          "0.0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Student Percent - Native Hawaiian or Pacific Islander",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 40,
+        "unique_ratio": 0.0295,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.023",
+          "0.0",
+          "0.0",
+          "0.0",
+          "0.0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Student Percent - White",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 390,
+        "unique_ratio": 0.288,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.047",
+          "0.06",
+          "0.032",
+          "0.079",
+          "0.045"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Teacher Percent - Asian",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 151,
+        "unique_ratio": 0.1115,
+        "quality_flag": "clean",
+        "sample_values": [
+          "N<5",
+          "0.297",
+          "N<5",
+          "N<5",
+          "0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Teacher Percent - Black",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 392,
+        "unique_ratio": 0.2895,
+        "quality_flag": "clean",
+        "sample_values": [
+          "N<5",
+          "N<5",
+          "N<5",
+          "N<5",
+          "N<5"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Teacher Percent - Hispanic",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 363,
+        "unique_ratio": 0.2681,
+        "quality_flag": "clean",
+        "sample_values": [
+          "N<5",
+          "0.216",
+          "0.303",
+          "N<5",
+          "N<5"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Teacher Percent - Native American",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 4,
+        "unique_ratio": 0.003,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Teacher Percent - Native Hawaiian or Pacific Islander",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 2,
+        "unique_ratio": 0.0015,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Teacher Percent - White",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 532,
+        "unique_ratio": 0.3929,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.667",
+          "0.405",
+          "0.515",
+          "0.667",
+          "0.826"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Nearby Student Distance (mi)",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0022,
+        "raw_null_pct": 0.0022,
+        "unique_count": 41,
+        "unique_ratio": 0.0303,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.3",
+          "0.7",
+          "0.2",
+          "0.7",
+          "0.4"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Nearby Student Percent - Asian",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0022,
+        "raw_null_pct": 0.0022,
+        "unique_count": 403,
+        "unique_ratio": 0.2981,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.094",
+          "0.304",
+          "0.082",
+          "0.244",
+          "0.111"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Nearby Student Percent - Black",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0022,
+        "raw_null_pct": 0.0022,
+        "unique_count": 583,
+        "unique_ratio": 0.4312,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.228",
+          "0.139",
+          "0.289",
+          "0.126",
+          "0.207"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Nearby Student Percent - Hispanic",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0022,
+        "raw_null_pct": 0.0022,
+        "unique_count": 659,
+        "unique_ratio": 0.4874,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.564",
+          "0.366",
+          "0.505",
+          "0.379",
+          "0.548"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Nearby Student Percent - Native American",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0022,
+        "raw_null_pct": 0.0022,
+        "unique_count": 72,
+        "unique_ratio": 0.0533,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.004",
+          "0.004",
+          "0.003",
+          "0.004",
+          "0.004"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Nearby Student Percent - Native Hawaiian or Pacific Islander",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0022,
+        "raw_null_pct": 0.0022,
+        "unique_count": 32,
+        "unique_ratio": 0.0237,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.004",
+          "0.002",
+          "0.003",
+          "0.003",
+          "0.004"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Nearby Student Percent - White",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0022,
+        "raw_null_pct": 0.0022,
+        "unique_count": 402,
+        "unique_ratio": 0.2973,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.075",
+          "0.134",
+          "0.081",
+          "0.189",
+          "0.088"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "District Percent - Asian",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 75,
+        "unique_ratio": 0.0554,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.065",
+          "0.065",
+          "0.172",
+          "0.065",
+          "0.065"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "District Percent - Black",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 89,
+        "unique_ratio": 0.0657,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.161",
+          "0.161",
+          "0.149",
+          "0.161",
+          "0.161"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "District Percent - Hispanic",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 93,
+        "unique_ratio": 0.0687,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.563",
+          "0.563",
+          "0.46",
+          "0.563",
+          "0.563"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "District Percent - Native American",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 25,
+        "unique_ratio": 0.0185,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.006",
+          "0.006",
+          "0.005",
+          "0.006",
+          "0.006"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "District Percent - Native Hawaiian or Pacific Islander",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 12,
+        "unique_ratio": 0.0089,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.004",
+          "0.004",
+          "0.003",
+          "0.004",
+          "0.004"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "District Percent - White",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0007,
+        "raw_null_pct": 0.0007,
+        "unique_count": 74,
+        "unique_ratio": 0.0547,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.154",
+          "0.154",
+          "0.153",
+          "0.154",
+          "0.154"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Years of principal experience at this school",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0657,
+        "raw_null_pct": 0.0657,
+        "unique_count": 197,
+        "unique_ratio": 0.1556,
+        "quality_flag": "clean",
+        "sample_values": [
+          "14.1",
+          "8.1",
+          "2.1",
+          "1.1",
+          "1.0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Percent of teachers with 3 or more years of experience",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0576,
+        "raw_null_pct": 0.0576,
+        "unique_count": 348,
+        "unique_ratio": 0.2725,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.667",
+          "0.811",
+          "0.576",
+          "0.952",
+          "0.652"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Average Student Attendance",
+        "declared_type": "object",
+        "detected_type": "numeric_text",
+        "null_pct": 0.0059,
+        "raw_null_pct": 0.0059,
+        "unique_count": 157,
+        "unique_ratio": 0.1166,
+        "quality_flag": "warning",
+        "sample_values": [
+          "0.882",
+          "0.864",
+          "0.862",
+          "0.869",
+          "0.886"
+        ],
+        "quality_reason": "Values look numeric but the column is stored as text.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Percentage of Students with >90% Attendance",
+        "declared_type": "object",
+        "detected_type": "numeric_text",
+        "null_pct": 0.0044,
+        "raw_null_pct": 0.0044,
+        "unique_count": 510,
+        "unique_ratio": 0.3781,
+        "quality_flag": "warning",
+        "sample_values": [
+          "0.483",
+          "0.44",
+          "0.425",
+          "0.433",
+          "0.537"
+        ],
+        "quality_reason": "Values look numeric but the column is stored as text.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Teacher Attendance Rate",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0672,
+        "raw_null_pct": 0.0672,
+        "unique_count": 91,
+        "unique_ratio": 0.072,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.971",
+          "0.956",
+          "0.963",
+          "0.949",
+          "0.973"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Percentage of students with IEPs receiving all recommended special education programs",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.1742,
+        "raw_null_pct": 0.1742,
+        "unique_count": 44,
+        "unique_ratio": 0.0393,
+        "quality_flag": "clean",
+        "sample_values": [
+          "1.0",
+          "0.85",
+          "1.0",
+          "0.91",
+          "0.96"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Percentage of students with IEPs receiving some recommended special education programs",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.7786,
+        "raw_null_pct": 0.7786,
+        "unique_count": 31,
+        "unique_ratio": 0.1033,
+        "quality_flag": "warning",
+        "sample_values": [
+          "0.0",
+          "0.0",
+          "0.0",
+          "0.11",
+          "0.04"
+        ],
+        "quality_reason": "Column has a meaningful rate of null or null-like values.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Percentage of students with IEPs receiving no recommended special education programs",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.7793,
+        "raw_null_pct": 0.7793,
+        "unique_count": 12,
+        "unique_ratio": 0.0401,
+        "quality_flag": "warning",
+        "sample_values": [
+          "0.0",
+          "0.0",
+          "0.0",
+          "0.0",
+          "0.0"
+        ],
+        "quality_reason": "Column has a meaningful rate of null or null-like values.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Percentage of students with IEPs receiving all recommended related services",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.1727,
+        "raw_null_pct": 0.1727,
+        "unique_count": 29,
+        "unique_ratio": 0.0259,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0.99",
+          "0.98",
+          "0.97",
+          "0.98",
+          "0.97"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Percentage of students with IEPs receiving some recommended related services",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.6923,
+        "raw_null_pct": 0.6923,
+        "unique_count": 5,
+        "unique_ratio": 0.012,
+        "quality_flag": "warning",
+        "sample_values": [
+          "0.0",
+          "0.0",
+          "0.0",
+          "0.0",
+          "0.0"
+        ],
+        "quality_reason": "Column has a meaningful rate of null or null-like values.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "Percentage of students with IEPs receiving no recommended related services",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.6923,
+        "raw_null_pct": 0.6923,
+        "unique_count": 27,
+        "unique_ratio": 0.0647,
+        "quality_flag": "warning",
+        "sample_values": [
+          "0.0",
+          "0.0",
+          "0.13",
+          "0.03",
+          "0.05"
+        ],
+        "quality_reason": "Column has a meaningful rate of null or null-like values.",
+        "phantom_dimension": false
+      }
+    ],
+    "cross_modal_findings": [
+      {
+        "type": "dashboard_context_attached",
+        "severity": "low",
+        "summary": "Dashboard context was attached and is preserved for the multimodal profiler path."
+      },
+      {
+        "type": "dictionary_context_attached",
+        "severity": "low",
+        "summary": "Data dictionary context was attached and is preserved for semantic cross-checking."
+      },
+      {
+        "type": "multimodal_path_deferred",
+        "severity": "low",
+        "summary": "Multimodal context is attached, but the advanced Gemini cross-check path is not active in this environment."
+      }
+    ],
+    "schema_quality_score": 0.9079
+  },
+  "issues": {
+    "issues": [
+      {
+        "issue_id": "Unnamed: 0_unlabeled",
+        "column_name": "Unnamed: 0",
+        "severity": "critical",
+        "category": "column_naming",
+        "problem_description": "Column `Unnamed: 0` has no meaningful business label.",
+        "business_impact": "AI BI tools cannot reason reliably about ambiguous field names, so this column will be skipped, misunderstood, or hallucinated around."
+      },
+      {
+        "issue_id": "Unnamed: 1_unlabeled",
+        "column_name": "Unnamed: 1",
+        "severity": "critical",
+        "category": "column_naming",
+        "problem_description": "Column `Unnamed: 1` has no meaningful business label.",
+        "business_impact": "AI BI tools cannot reason reliably about ambiguous field names, so this column will be skipped, misunderstood, or hallucinated around."
+      },
+      {
+        "issue_id": "Unnamed: 2_unlabeled",
+        "column_name": "Unnamed: 2",
+        "severity": "critical",
+        "category": "column_naming",
+        "problem_description": "Column `Unnamed: 2` has no meaningful business label.",
+        "business_impact": "AI BI tools cannot reason reliably about ambiguous field names, so this column will be skipped, misunderstood, or hallucinated around."
+      },
+      {
+        "issue_id": "Unnamed: 0_mostly_null",
+        "column_name": "Unnamed: 0",
+        "severity": "medium",
+        "category": "completeness",
+        "problem_description": "Column `Unnamed: 0` is effectively empty for most rows.",
+        "business_impact": "Sparse fields create misleading filters and noisy joins, and they rarely deserve a prominent place in a semantic model."
+      },
+      {
+        "issue_id": "Unnamed: 1_mostly_null",
+        "column_name": "Unnamed: 1",
+        "severity": "medium",
+        "category": "completeness",
+        "problem_description": "Column `Unnamed: 1` is effectively empty for most rows.",
+        "business_impact": "Sparse fields create misleading filters and noisy joins, and they rarely deserve a prominent place in a semantic model."
+      },
+      {
+        "issue_id": "Unnamed: 2_mostly_null",
+        "column_name": "Unnamed: 2",
+        "severity": "medium",
+        "category": "completeness",
+        "problem_description": "Column `Unnamed: 2` is effectively empty for most rows.",
+        "business_impact": "Sparse fields create misleading filters and noisy joins, and they rarely deserve a prominent place in a semantic model."
+      },
+      {
+        "issue_id": "DBN_free_text_dimension",
+        "column_name": "DBN",
+        "severity": "low",
+        "category": "modeling_risk",
+        "problem_description": "Column `DBN` behaves more like free text than a stable dimension.",
+        "business_impact": "High-cardinality text fields add noise to semantic layers and usually perform poorly as filterable business dimensions."
+      },
+      {
+        "issue_id": "School Name_free_text_dimension",
+        "column_name": "School Name",
+        "severity": "low",
+        "category": "modeling_risk",
+        "problem_description": "Column `School Name` behaves more like free text than a stable dimension.",
+        "business_impact": "High-cardinality text fields add noise to semantic layers and usually perform poorly as filterable business dimensions."
+      },
+      {
+        "issue_id": "Advising and Planning - School Percent Positive_high_null_pct",
+        "column_name": "Advising and Planning - School Percent Positive",
+        "severity": "medium",
+        "category": "completeness",
+        "problem_description": "Column `Advising and Planning - School Percent Positive` has a meaningful rate of null or null-like values (26.2%).",
+        "business_impact": "Incomplete data can lead to skewed analyses and unreliable insights, potentially misrepresenting school performance or student support effectiveness."
+      },
+      {
+        "issue_id": "Average Incoming ELA Proficiency (Based on 5th Grade)_mostly_null",
+        "column_name": "Average Incoming ELA Proficiency (Based on 5th Grade)",
+        "severity": "critical",
+        "category": "completeness",
+        "problem_description": "Column `Average Incoming ELA Proficiency (Based on 5th Grade)` is effectively empty for most rows (71.96% null).",
+        "business_impact": "Sparse fields create misleading filters and noisy joins, and they rarely deserve a prominent place in a semantic model. This limits the ability to analyze ELA proficiency trends."
+      },
+      {
+        "issue_id": "Average Incoming Math Proficiency (Based on 5th Grade)_mostly_null",
+        "column_name": "Average Incoming Math Proficiency (Based on 5th Grade)",
+        "severity": "critical",
+        "category": "completeness",
+        "problem_description": "Column `Average Incoming Math Proficiency (Based on 5th Grade)` is effectively empty for most rows (71.88% null).",
+        "business_impact": "Sparse fields create misleading filters and noisy joins, and they rarely deserve a prominent place in a semantic model. This limits the ability to analyze Math proficiency trends."
+      },
+      {
+        "issue_id": "Economic Need Index_mixed_type_numeric_text",
+        "column_name": "Economic Need Index",
+        "severity": "medium",
+        "category": "data_type",
+        "problem_description": "Column `Economic Need Index` contains mixed data types, including non-numeric text (e.g., '> 95%'), preventing its use as a measure.",
+        "business_impact": "AI BI tools will struggle to perform calculations or aggregations on this field, limiting its analytical utility for understanding economic need."
+      },
+      {
+        "issue_id": "Percent HRA Eligible_numeric_as_text",
+        "column_name": "Percent HRA Eligible",
+        "severity": "medium",
+        "category": "data_type",
+        "problem_description": "Column `Percent HRA Eligible` contains numeric values stored as text.",
+        "business_impact": "AI BI tools may not correctly interpret this column as a measure, leading to incorrect aggregations or requiring manual type casting, hindering analysis of eligibility."
+      },
+      {
+        "issue_id": "Teacher Percent - Asian_mixed_type_numeric_text",
+        "column_name": "Teacher Percent - Asian",
+        "severity": "medium",
+        "category": "data_type",
+        "problem_description": "Column `Teacher Percent - Asian` contains mixed data types, including non-numeric text (e.g., 'N<5'), preventing its use as a measure.",
+        "business_impact": "AI BI tools will struggle to perform calculations or aggregations on this field, limiting its analytical utility for understanding teacher demographics."
+      },
+      {
+        "issue_id": "Teacher Percent - Black_mixed_type_numeric_text",
+        "column_name": "Teacher Percent - Black",
+        "severity": "medium",
+        "category": "data_type",
+        "problem_description": "Column `Teacher Percent - Black` contains mixed data types, including non-numeric text (e.g., 'N<5'), preventing its use as a measure.",
+        "business_impact": "AI BI tools will struggle to perform calculations or aggregations on this field, limiting its analytical utility for understanding teacher demographics."
+      },
+      {
+        "issue_id": "Teacher Percent - Hispanic_mixed_type_numeric_text",
+        "column_name": "Teacher Percent - Hispanic",
+        "severity": "medium",
+        "category": "data_type",
+        "problem_description": "Column `Teacher Percent - Hispanic` contains mixed data types, including non-numeric text (e.g., 'N<5'), preventing its use as a measure.",
+        "business_impact": "AI BI tools will struggle to perform calculations or aggregations on this field, limiting its analytical utility for understanding teacher demographics."
+      },
+      {
+        "issue_id": "Teacher Percent - White_numeric_as_text",
+        "column_name": "Teacher Percent - White",
+        "severity": "medium",
+        "category": "data_type",
+        "problem_description": "Column `Teacher Percent - White` contains numeric values stored as text.",
+        "business_impact": "AI BI tools may not correctly interpret this column as a measure, leading to incorrect aggregations or requiring manual type casting, hindering analysis of teacher demographics."
+      },
+      {
+        "issue_id": "Average Student Attendance_numeric_as_text",
+        "column_name": "Average Student Attendance",
+        "severity": "medium",
+        "category": "data_type",
+        "problem_description": "Column `Average Student Attendance` contains numeric values stored as text.",
+        "business_impact": "AI BI tools may not correctly interpret this column as a measure, leading to incorrect aggregations or requiring manual type casting, hindering analysis of student attendance."
+      },
+      {
+        "issue_id": "Percentage of Students with >90% Attendance_numeric_as_text",
+        "column_name": "Percentage of Students with >90% Attendance",
+        "severity": "medium",
+        "category": "data_type",
+        "problem_description": "Column `Percentage of Students with >90% Attendance` contains numeric values stored as text.",
+        "business_impact": "AI BI tools may not correctly interpret this column as a measure, leading to incorrect aggregations or requiring manual type casting, hindering analysis of student attendance."
+      },
+      {
+        "issue_id": "Percentage of students with IEPs receiving some recommended special education programs_mostly_null",
+        "column_name": "Percentage of students with IEPs receiving some recommended special education programs",
+        "severity": "critical",
+        "category": "completeness",
+        "problem_description": "Column `Percentage of students with IEPs receiving some recommended special education programs` is effectively empty for most rows (77.86% null).",
+        "business_impact": "Sparse fields create misleading filters and noisy joins, and they rarely deserve a prominent place in a semantic model. This limits the ability to assess special education program delivery."
+      },
+      {
+        "issue_id": "Percentage of students with IEPs receiving no recommended special education programs_mostly_null",
+        "column_name": "Percentage of students with IEPs receiving no recommended special education programs",
+        "severity": "critical",
+        "category": "completeness",
+        "problem_description": "Column `Percentage of students with IEPs receiving no recommended special education programs` is effectively empty for most rows (77.93% null).",
+        "business_impact": "Sparse fields create misleading filters and noisy joins, and they rarely deserve a prominent place in a semantic model. This limits the ability to assess special education program delivery."
+      },
+      {
+        "issue_id": "Percentage of students with IEPs receiving some recommended related services_mostly_null",
+        "column_name": "Percentage of students with IEPs receiving some recommended related services",
+        "severity": "critical",
+        "category": "completeness",
+        "problem_description": "Column `Percentage of students with IEPs receiving some recommended related services` is effectively empty for most rows (69.23% null).",
+        "business_impact": "Sparse fields create misleading filters and noisy joins, and they rarely deserve a prominent place in a semantic model. This limits the ability to assess related services delivery for students with IEPs."
+      },
+      {
+        "issue_id": "Percentage of students with IEPs receiving no recommended related services_mostly_null",
+        "column_name": "Percentage of students with IEPs receiving no recommended related services",
+        "severity": "critical",
+        "category": "completeness",
+        "problem_description": "Column `Percentage of students with IEPs receiving no recommended related services` is effectively empty for most rows (69.23% null).",
+        "business_impact": "Sparse fields create misleading filters and noisy joins, and they rarely deserve a prominent place in a semantic model. This limits the ability to assess related services delivery for students with IEPs."
+      }
+    ],
+    "generator": "llm_refined"
+  },
+  "remediation": {
+    "fixes": [
+      {
+        "issue_id": "Unnamed: 0_unlabeled",
+        "priority": 1,
+        "plain_english_fix": "Rename the field to a business-meaningful label and update downstream models to use the canonical name.",
+        "sql_snippet": "ALTER TABLE your_table RENAME COLUMN \"Unnamed: 0\" TO business_meaningful_name;",
+        "python_snippet": "df = df.rename(columns={'Unnamed: 0': 'business_meaningful_name'})"
+      },
+      {
+        "issue_id": "Unnamed: 1_unlabeled",
+        "priority": 2,
+        "plain_english_fix": "Rename the field to a business-meaningful label and update downstream models to use the canonical name.",
+        "sql_snippet": "ALTER TABLE your_table RENAME COLUMN \"Unnamed: 1\" TO business_meaningful_name;",
+        "python_snippet": "df = df.rename(columns={'Unnamed: 1': 'business_meaningful_name'})"
+      },
+      {
+        "issue_id": "Unnamed: 2_unlabeled",
+        "priority": 3,
+        "plain_english_fix": "Rename the field to a business-meaningful label and update downstream models to use the canonical name.",
+        "sql_snippet": "ALTER TABLE your_table RENAME COLUMN \"Unnamed: 2\" TO business_meaningful_name;",
+        "python_snippet": "df = df.rename(columns={'Unnamed: 2': 'business_meaningful_name'})"
+      },
+      {
+        "issue_id": "Unnamed: 0_mostly_null",
+        "priority": 4,
+        "plain_english_fix": "This column is effectively empty. Consider dropping it if it serves no purpose, or investigate the source to understand why it's so sparse.",
+        "sql_snippet": "ALTER TABLE your_table DROP COLUMN \"Unnamed: 0\";",
+        "python_snippet": "df = df.drop(columns=['Unnamed: 0'])"
+      },
+      {
+        "issue_id": "Unnamed: 1_mostly_null",
+        "priority": 5,
+        "plain_english_fix": "This column is effectively empty. Consider dropping it if it serves no purpose, or investigate the source to understand why it's so sparse.",
+        "sql_snippet": "ALTER TABLE your_table DROP COLUMN \"Unnamed: 1\";",
+        "python_snippet": "df = df.drop(columns=['Unnamed: 1'])"
+      },
+      {
+        "issue_id": "Unnamed: 2_mostly_null",
+        "priority": 6,
+        "plain_english_fix": "This column is effectively empty. Consider dropping it if it serves no purpose, or investigate the source to understand why it's so sparse.",
+        "sql_snippet": "ALTER TABLE your_table DROP COLUMN \"Unnamed: 2\";",
+        "python_snippet": "df = df.drop(columns=['Unnamed: 2'])"
+      },
+      {
+        "issue_id": "DBN_free_text_dimension",
+        "priority": 7,
+        "plain_english_fix": "If DBN is intended as a dimension, ensure it's consistently formatted and consider creating a lookup table. Otherwise, treat it as a descriptive text field.",
+        "sql_snippet": "SELECT DBN, COUNT(*) FROM your_table GROUP BY DBN HAVING COUNT(*) > 1;",
+        "python_snippet": "df['DBN'] = df['DBN'].astype(str).str.strip()"
+      },
+      {
+        "issue_id": "School Name_free_text_dimension",
+        "priority": 8,
+        "plain_english_fix": "If 'School Name' is intended as a dimension, ensure consistent naming conventions. Otherwise, treat it as a descriptive text field.",
+        "sql_snippet": "SELECT \"School Name\", COUNT(*) FROM your_table GROUP BY \"School Name\" HAVING COUNT(*) > 1;",
+        "python_snippet": "df['School Name'] = df['School Name'].astype(str).str.strip()"
+      },
+      {
+        "issue_id": "Advising and Planning - School Percent Positive_high_null_pct",
+        "priority": 9,
+        "plain_english_fix": "Investigate the root cause of high nulls. Consider imputing missing values if appropriate, or exclude the column from analyses where completeness is critical.",
+        "sql_snippet": "SELECT COUNT(*) AS total_rows, COUNT(\"Advising and Planning - School Percent Positive\") AS non_null_rows FROM your_table;",
+        "python_snippet": "null_count = df['Advising and Planning - School Percent Positive'].isnull().sum()"
+      },
+      {
+        "issue_id": "Average Incoming ELA Proficiency (Based on 5th Grade)_mostly_null",
+        "priority": 10,
+        "plain_english_fix": "Investigate the reason for the high percentage of null values. If the data is truly missing and cannot be recovered, consider removing the column from the semantic model or clearly documenting its limitations.",
+        "sql_snippet": "SELECT COUNT(*) AS total_rows, COUNT(\"Average Incoming ELA Proficiency (Based on 5th Grade)\") AS non_null_rows FROM your_table;",
+        "python_snippet": "df_filtered = df.dropna(subset=['Average Incoming ELA Proficiency (Based on 5th Grade)'])"
+      },
+      {
+        "issue_id": "Average Incoming Math Proficiency (Based on 5th Grade)_mostly_null",
+        "priority": 11,
+        "plain_english_fix": "Investigate the reason for the high percentage of null values. If the data is truly missing and cannot be recovered, consider removing the column from the semantic model or clearly documenting its limitations.",
+        "sql_snippet": "SELECT COUNT(*) AS total_rows, COUNT(\"Average Incoming Math Proficiency (Based on 5th Grade)\") AS non_null_rows FROM your_table;",
+        "python_snippet": "df_filtered = df.dropna(subset=['Average Incoming Math Proficiency (Based on 5th Grade)'])"
+      },
+      {
+        "issue_id": "Economic Need Index_mixed_type_numeric_text",
+        "priority": 12,
+        "plain_english_fix": "Clean the column by converting non-numeric text (e.g., '> 95%') into a numeric representation (e.g., 0.95), then cast the column to a numeric type.",
+        "sql_snippet": "UPDATE your_table SET \"Economic Need Index\" = REPLACE(\"Economic Need Index\", '> 95%', '0.95') WHERE \"Economic Need Index\" LIKE '> 95%'; ALTER TABLE your_table ALTER COLUMN \"Economic Need Index\" TYPE NUMERIC USING \"Economic Need Index\"::NUMERIC;",
+        "python_snippet": "df['Economic Need Index'] = df['Economic Need Index'].replace({'> 95%': '0.95'}).astype(float)"
+      },
+      {
+        "issue_id": "Percent HRA Eligible_numeric_as_text",
+        "priority": 13,
+        "plain_english_fix": "Cast the column to a numeric data type (e.g., float) to enable proper calculations and aggregations.",
+        "sql_snippet": "ALTER TABLE your_table ALTER COLUMN \"Percent HRA Eligible\" TYPE FLOAT USING \"Percent HRA Eligible\"::FLOAT;",
+        "python_snippet": "df['Percent HRA Eligible'] = df['Percent HRA Eligible'].astype(float)"
+      },
+      {
+        "issue_id": "Teacher Percent - Asian_mixed_type_numeric_text",
+        "priority": 14,
+        "plain_english_fix": "Replace non-numeric values like 'N<5' with a suitable numeric representation (e.g., NULL) and then cast the column to a numeric type.",
+        "sql_snippet": "UPDATE your_table SET \"Teacher Percent - Asian\" = NULL WHERE \"Teacher Percent - Asian\" = 'N<5'; ALTER TABLE your_table ALTER COLUMN \"Teacher Percent - Asian\" TYPE FLOAT USING \"Teacher Percent - Asian\"::FLOAT;",
+        "python_snippet": "df['Teacher Percent - Asian'] = df['Teacher Percent - Asian'].replace({'N<5': None}).astype(float)"
+      },
+      {
+        "issue_id": "Teacher Percent - Black_mixed_type_numeric_text",
+        "priority": 15,
+        "plain_english_fix": "Replace non-numeric values like 'N<5' with a suitable numeric representation (e.g., NULL) and then cast the column to a numeric type.",
+        "sql_snippet": "UPDATE your_table SET \"Teacher Percent - Black\" = NULL WHERE \"Teacher Percent - Black\" = 'N<5'; ALTER TABLE your_table ALTER COLUMN \"Teacher Percent - Black\" TYPE FLOAT USING \"Teacher Percent - Black\"::FLOAT;",
+        "python_snippet": "df['Teacher Percent - Black'] = df['Teacher Percent - Black'].replace({'N<5': None}).astype(float)"
+      },
+      {
+        "issue_id": "Teacher Percent - Hispanic_mixed_type_numeric_text",
+        "priority": 16,
+        "plain_english_fix": "Replace non-numeric values like 'N<5' with a suitable numeric representation (e.g., NULL) and then cast the column to a numeric type.",
+        "sql_snippet": "UPDATE your_table SET \"Teacher Percent - Hispanic\" = NULL WHERE \"Teacher Percent - Hispanic\" = 'N<5'; ALTER TABLE your_table ALTER COLUMN \"Teacher Percent - Hispanic\" TYPE FLOAT USING \"Teacher Percent - Hispanic\"::FLOAT;",
+        "python_snippet": "df['Teacher Percent - Hispanic'] = df['Teacher Percent - Hispanic'].replace({'N<5': None}).astype(float)"
+      },
+      {
+        "issue_id": "Teacher Percent - White_numeric_as_text",
+        "priority": 17,
+        "plain_english_fix": "Cast the column to a numeric data type (e.g., float) to enable proper calculations and aggregations.",
+        "sql_snippet": "ALTER TABLE your_table ALTER COLUMN \"Teacher Percent - White\" TYPE FLOAT USING \"Teacher Percent - White\"::FLOAT;",
+        "python_snippet": "df['Teacher Percent - White'] = df['Teacher Percent - White'].astype(float)"
+      },
+      {
+        "issue_id": "Average Student Attendance_numeric_as_text",
+        "priority": 18,
+        "plain_english_fix": "Cast the column to a numeric data type (e.g., float) to enable proper calculations and aggregations.",
+        "sql_snippet": "ALTER TABLE your_table ALTER COLUMN \"Average Student Attendance\" TYPE FLOAT USING \"Average Student Attendance\"::FLOAT;",
+        "python_snippet": "df['Average Student Attendance'] = df['Average Student Attendance'].astype(float)"
+      },
+      {
+        "issue_id": "Percentage of Students with >90% Attendance_numeric_as_text",
+        "priority": 19,
+        "plain_english_fix": "Cast the column to a numeric data type (e.g., float) to enable proper calculations and aggregations.",
+        "sql_snippet": "ALTER TABLE your_table ALTER COLUMN \"Percentage of Students with >90% Attendance\" TYPE FLOAT USING \"Percentage of Students with >90% Attendance\"::FLOAT;",
+        "python_snippet": "df['Percentage of Students with >90% Attendance'] = df['Percentage of Students with >90% Attendance'].astype(float)"
+      },
+      {
+        "issue_id": "Percentage of students with IEPs receiving some recommended special education programs_mostly_null",
+        "priority": 20,
+        "plain_english_fix": "Investigate the reason for the high percentage of null values. If the data is truly missing and cannot be recovered, consider removing the column from the semantic model or clearly documenting its limitations.",
+        "sql_snippet": "SELECT COUNT(*) AS total_rows, COUNT(\"Percentage of students with IEPs receiving some recommended special education programs\") AS non_null_rows FROM your_table;",
+        "python_snippet": "df_filtered = df.dropna(subset=['Percentage of students with IEPs receiving some recommended special education programs'])"
+      },
+      {
+        "issue_id": "Percentage of students with IEPs receiving no recommended special education programs_mostly_null",
+        "priority": 21,
+        "plain_english_fix": "Investigate the reason for the high percentage of null values. If the data is truly missing and cannot be recovered, consider removing the column from the semantic model or clearly documenting its limitations.",
+        "sql_snippet": "SELECT COUNT(*) AS total_rows, COUNT(\"Percentage of students with IEPs receiving no recommended special education programs\") AS non_null_rows FROM your_table;",
+        "python_snippet": "df_filtered = df.dropna(subset=['Percentage of students with IEPs receiving no recommended special education programs'])"
+      },
+      {
+        "issue_id": "Percentage of students with IEPs receiving some recommended related services_mostly_null",
+        "priority": 22,
+        "plain_english_fix": "Investigate the reason for the high percentage of null values. If the data is truly missing and cannot be recovered, consider removing the column from the semantic model or clearly documenting its limitations.",
+        "sql_snippet": "SELECT COUNT(*) AS total_rows, COUNT(\"Percentage of students with IEPs receiving some recommended related services\") AS non_null_rows FROM your_table;",
+        "python_snippet": "df_filtered = df.dropna(subset=['Percentage of students with IEPs receiving some recommended related services'])"
+      },
+      {
+        "issue_id": "Percentage of students with IEPs receiving no recommended related services_mostly_null",
+        "priority": 23,
+        "plain_english_fix": "Investigate the reason for the high percentage of null values. If the data is truly missing and cannot be recovered, consider removing the column from the semantic model or clearly documenting its limitations.",
+        "sql_snippet": "SELECT COUNT(*) AS total_rows, COUNT(\"Percentage of students with IEPs receiving no recommended related services\") AS non_null_rows FROM your_table;",
+        "python_snippet": "df_filtered = df.dropna(subset=['Percentage of students with IEPs receiving no recommended related services'])"
+      }
+    ],
+    "generator": "llm_refined"
+  },
+  "report": {
+    "score": 23,
+    "grade": "F",
+    "confidence_level": "high",
+    "evidence_coverage": "csv_plus_dashboard_dictionary",
+    "top_3_blockers": [
+      "Column `Unnamed: 0` has no meaningful business label.",
+      "Column `Unnamed: 1` has no meaningful business label.",
+      "Column `Unnamed: 2` has no meaningful business label."
+    ],
+    "one_line_verdict": "Significant data quality and modeling issues, particularly with unlabeled and incomplete critical fields, severely hinder AI BI readiness.",
+    "score_computation": [
+      {
+        "issue_id": "Unnamed: 0_unlabeled",
+        "deduction": 6,
+        "reason": "Column `Unnamed: 0` has no meaningful business label."
+      },
+      {
+        "issue_id": "Unnamed: 1_unlabeled",
+        "deduction": 6,
+        "reason": "Column `Unnamed: 1` has no meaningful business label."
+      },
+      {
+        "issue_id": "Unnamed: 2_unlabeled",
+        "deduction": 6,
+        "reason": "Column `Unnamed: 2` has no meaningful business label."
+      },
+      {
+        "issue_id": "Unnamed: 0_mostly_null",
+        "deduction": 2,
+        "reason": "Column `Unnamed: 0` is effectively empty for most rows."
+      },
+      {
+        "issue_id": "Unnamed: 1_mostly_null",
+        "deduction": 2,
+        "reason": "Column `Unnamed: 1` is effectively empty for most rows."
+      },
+      {
+        "issue_id": "Unnamed: 2_mostly_null",
+        "deduction": 2,
+        "reason": "Column `Unnamed: 2` is effectively empty for most rows."
+      },
+      {
+        "issue_id": "DBN_free_text_dimension",
+        "deduction": 1,
+        "reason": "Column `DBN` behaves more like free text than a stable dimension."
+      },
+      {
+        "issue_id": "School Name_free_text_dimension",
+        "deduction": 1,
+        "reason": "Column `School Name` behaves more like free text than a stable dimension."
+      },
+      {
+        "issue_id": "Advising and Planning - School Percent Positive_high_null_pct",
+        "deduction": 3,
+        "reason": "Column `Advising and Planning - School Percent Positive` has a meaningful rate of null or null-like values (26.2%)."
+      },
+      {
+        "issue_id": "Average Incoming ELA Proficiency (Based on 5th Grade)_mostly_null",
+        "deduction": 4,
+        "reason": "Column `Average Incoming ELA Proficiency (Based on 5th Grade)` is effectively empty for most rows (71.96% null)."
+      },
+      {
+        "issue_id": "Average Incoming Math Proficiency (Based on 5th Grade)_mostly_null",
+        "deduction": 4,
+        "reason": "Column `Average Incoming Math Proficiency (Based on 5th Grade)` is effectively empty for most rows (71.88% null)."
+      },
+      {
+        "issue_id": "Economic Need Index_mixed_type_numeric_text",
+        "deduction": 3,
+        "reason": "Column `Economic Need Index` contains mixed data types, including non-numeric text (e.g., '> 95%'), preventing its use as a measure."
+      },
+      {
+        "issue_id": "Percent HRA Eligible_numeric_as_text",
+        "deduction": 3,
+        "reason": "Column `Percent HRA Eligible` contains numeric values stored as text."
+      },
+      {
+        "issue_id": "Teacher Percent - Asian_mixed_type_numeric_text",
+        "deduction": 3,
+        "reason": "Column `Teacher Percent - Asian` contains mixed data types, including non-numeric text (e.g., 'N<5'), preventing its use as a measure."
+      },
+      {
+        "issue_id": "Teacher Percent - Black_mixed_type_numeric_text",
+        "deduction": 3,
+        "reason": "Column `Teacher Percent - Black` contains mixed data types, including non-numeric text (e.g., 'N<5'), preventing its use as a measure."
+      },
+      {
+        "issue_id": "Teacher Percent - Hispanic_mixed_type_numeric_text",
+        "deduction": 3,
+        "reason": "Column `Teacher Percent - Hispanic` contains mixed data types, including non-numeric text (e.g., 'N<5'), preventing its use as a measure."
+      },
+      {
+        "issue_id": "Teacher Percent - White_numeric_as_text",
+        "deduction": 3,
+        "reason": "Column `Teacher Percent - White` contains numeric values stored as text."
+      },
+      {
+        "issue_id": "Average Student Attendance_numeric_as_text",
+        "deduction": 3,
+        "reason": "Column `Average Student Attendance` contains numeric values stored as text."
+      },
+      {
+        "issue_id": "Percentage of Students with >90% Attendance_numeric_as_text",
+        "deduction": 3,
+        "reason": "Column `Percentage of Students with >90% Attendance` contains numeric values stored as text."
+      },
+      {
+        "issue_id": "Percentage of students with IEPs receiving some recommended special education programs_mostly_null",
+        "deduction": 4,
+        "reason": "Column `Percentage of students with IEPs receiving some recommended special education programs` is effectively empty for most rows (77.86% null)."
+      },
+      {
+        "issue_id": "Percentage of students with IEPs receiving no recommended special education programs_mostly_null",
+        "deduction": 4,
+        "reason": "Column `Percentage of students with IEPs receiving no recommended special education programs` is effectively empty for most rows (77.93% null)."
+      },
+      {
+        "issue_id": "Percentage of students with IEPs receiving some recommended related services_mostly_null",
+        "deduction": 4,
+        "reason": "Column `Percentage of students with IEPs receiving some recommended related services` is effectively empty for most rows (69.23% null)."
+      },
+      {
+        "issue_id": "Percentage of students with IEPs receiving no recommended related services_mostly_null",
+        "deduction": 4,
+        "reason": "Column `Percentage of students with IEPs receiving no recommended related services` is effectively empty for most rows (69.23% null)."
+      }
+    ],
+    "generator": "llm_refined"
+  },
+  "business_audit": null,
+  "impact_map": null,
+  "fix_pack": null,
+  "dictionary": null,
+  "reconciliation": null,
+  "data_handling": null,
+  "reasoning_trace": {
+    "path": "gemini",
+    "validator": "llm",
+    "planner": "llm",
+    "scorer": "llm",
+    "note": "Gemini chain completed with partial fallback: validator=llm; planner=llm; scorer=llm"
+  }
+}

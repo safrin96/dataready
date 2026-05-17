@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+python-json-logger
+anthropic
+google-genai
+pandas
+python-dotenv

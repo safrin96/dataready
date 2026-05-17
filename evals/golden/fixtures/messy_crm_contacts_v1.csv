@@ -1,0 +1,6 @@
+contact_id,created_dt,email,phone,lead_status,region,company_size,notes
+C001,2026/04/01,alice@example.com,(555) 123-4567,New,West,SMB,ready
+C002,04-02-2026,bob@example,5551234567,qualified,west,Enterprise,NULL
+C003,2026-04-03,,N/A,1,East,unknown,n/a
+C004,13/04/2026,carol@example.com,+1-555-000-0000,yes,South,200-500,follow up
+C005,2026-04-05,dave@example.com,,TRUE,North,0,none

@@ -1,0 +1,40 @@
+{
+  "version": "2026-05-16",
+  "bundles": [
+    {
+      "name": "nyc_tlc_primary",
+      "purpose": "real dataset + real dashboard + dictionary for multimodal BI audit",
+      "local_files": [
+        "datasets/final_test_pack/nyc_tlc/erm2-nwe9.csv",
+        "datasets/final_test_pack/nyc_tlc/taxi_zone_lookup.csv",
+        "datasets/final_test_pack/nyc_tlc/data_dictionary_trip_records_yellow.pdf"
+      ],
+      "external_sources": [
+        "https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page",
+        "https://www.nyc.gov/site/tlc/about/data-and-research.page",
+        "https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf",
+        "https://www.nyc.gov/assets/tlc/downloads/pdf/trip_record_user_guide.pdf"
+      ]
+    },
+    {
+      "name": "microsoft_powerbi_secondary",
+      "purpose": "enterprise BI sample dataset/dashboard path",
+      "local_files": [],
+      "external_sources": [
+        "https://learn.microsoft.com/en-us/power-bi/create-reports/sample-datasets",
+        "https://www.microsoft.com/en-us/download/details.aspx?id=46801",
+        "https://learn.microsoft.com/en-us/power-bi/create-reports/sample-regional-sales"
+      ]
+    },
+    {
+      "name": "uci_adult_supporting",
+      "purpose": "quality/adversarial support dataset",
+      "local_files": [
+        "datasets/final_test_pack/uci/uci_adult.csv"
+      ],
+      "external_sources": [
+        "https://archive.ics.uci.edu/dataset/2/adult"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dataready.local/schemas/remediation-plan.schema.json",
+  "title": "RemediationPlanArtifact",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "fixes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "issue_id": { "type": "string" },
+          "priority": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "plain_english_fix": { "type": "string" },
+          "sql_snippet": { "type": "string" },
+          "python_snippet": { "type": "string" }
+        },
+        "required": [
+          "issue_id",
+          "priority",
+          "plain_english_fix",
+          "sql_snippet",
+          "python_snippet"
+        ]
+      }
+    }
+  },
+  "required": ["fixes"]
+}
+

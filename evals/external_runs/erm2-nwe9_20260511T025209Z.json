@@ -1,0 +1,1189 @@
+{
+  "request": {
+    "audit_mode": "csv",
+    "dataset_name": "erm2-nwe9",
+    "dataset_format": "csv",
+    "includes_dashboard_image": false,
+    "includes_data_dictionary": false,
+    "compliance_mode": "standard"
+  },
+  "profiler": {
+    "dataset_fingerprint": "erm2-nwe9:616f65829b8058e8",
+    "profiling_mode": "tabular_only",
+    "row_count_sampled": 10000,
+    "column_count": 44,
+    "multimodal_context_used": false,
+    "columns": [
+      {
+        "name": "unique_key",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 10000,
+        "unique_ratio": 1.0,
+        "quality_flag": "clean",
+        "sample_values": [
+          "68926868",
+          "68928179",
+          "68925293",
+          "68928180",
+          "68923337"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "created_date",
+        "declared_type": "object",
+        "detected_type": "date_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 8351,
+        "unique_ratio": 0.8351,
+        "quality_flag": "warning",
+        "sample_values": [
+          "2026-05-09T02:32:59.000",
+          "2026-05-09T02:04:24.000",
+          "2026-05-09T02:03:07.000",
+          "2026-05-09T02:01:59.000",
+          "2026-05-09T01:51:02.000"
+        ],
+        "quality_reason": "Values look date-like but the column is stored as free-form text.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "closed_date",
+        "declared_type": "object",
+        "detected_type": "date_text",
+        "null_pct": 0.4621,
+        "raw_null_pct": 0.4621,
+        "unique_count": 4886,
+        "unique_ratio": 0.9083,
+        "quality_flag": "warning",
+        "sample_values": [
+          "2026-05-09T02:32:59.000",
+          "2026-05-09T01:48:32.000",
+          "2026-05-09T01:35:31.000",
+          "2026-05-09T01:50:18.000",
+          "2026-05-09T01:45:56.000"
+        ],
+        "quality_reason": "Values look date-like but the column is stored as free-form text.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "agency",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 13,
+        "unique_ratio": 0.0013,
+        "quality_flag": "clean",
+        "sample_values": [
+          "DOT",
+          "DSNY",
+          "DSNY",
+          "DSNY",
+          "NYPD"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "agency_name",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 13,
+        "unique_ratio": 0.0013,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Department of Transportation",
+          "Department of Sanitation",
+          "Department of Sanitation",
+          "Department of Sanitation",
+          "New York City Police Department"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "complaint_type",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 130,
+        "unique_ratio": 0.013,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Street Condition",
+          "Graffiti",
+          "Graffiti",
+          "Graffiti",
+          "Noise - Residential"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "descriptor",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0189,
+        "raw_null_pct": 0.0189,
+        "unique_count": 452,
+        "unique_ratio": 0.0461,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Pothole",
+          "Graffiti",
+          "Graffiti",
+          "Graffiti",
+          "Loud Music/Party"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "descriptor_2",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.6585,
+        "raw_null_pct": 0.6585,
+        "unique_count": 354,
+        "unique_ratio": 0.1037,
+        "quality_flag": "warning",
+        "sample_values": [
+          "Street or Sidewalk",
+          "Tobacco or Hookah Smoking or Vaping",
+          "Street or Sidewalk",
+          "Street or Sidewalk",
+          "Tobacco or Hookah Smoking or Vaping"
+        ],
+        "quality_reason": "Column has a meaningful rate of null or null-like values.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "location_type",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.1251,
+        "raw_null_pct": 0.1251,
+        "unique_count": 56,
+        "unique_ratio": 0.0064,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Comercial",
+          "Comercial",
+          "Comercial",
+          "Residential Building/House",
+          "Residential Building/House"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "incident_zip",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0087,
+        "raw_null_pct": 0.0087,
+        "unique_count": 188,
+        "unique_ratio": 0.019,
+        "quality_flag": "clean",
+        "sample_values": [
+          "10035.0",
+          "10462.0",
+          "10462.0",
+          "10462.0",
+          "10023.0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "incident_address",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0321,
+        "raw_null_pct": 0.0321,
+        "unique_count": 6928,
+        "unique_ratio": 0.7158,
+        "quality_flag": "clean",
+        "sample_values": [
+          "EAST  119 STREET",
+          "1255 CASTLE HILL AVENUE",
+          "1370A CASTLE HILL AVENUE",
+          "2161 STARLING AVENUE",
+          "128 WEST 74 STREET"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "street_name",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0321,
+        "raw_null_pct": 0.0321,
+        "unique_count": 2540,
+        "unique_ratio": 0.2624,
+        "quality_flag": "clean",
+        "sample_values": [
+          "EAST  119 STREET",
+          "CASTLE HILL AVENUE",
+          "CASTLE HILL AVENUE",
+          "STARLING AVENUE",
+          "WEST 74 STREET"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "cross_street_1",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.2376,
+        "raw_null_pct": 0.2376,
+        "unique_count": 2425,
+        "unique_ratio": 0.3181,
+        "quality_flag": "clean",
+        "sample_values": [
+          "5 AVENUE",
+          "COLUMBUS AVENUE",
+          "31 AVENUE",
+          "UTOPIA PARKWAY",
+          "GROVE AVENUE"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "cross_street_2",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.2383,
+        "raw_null_pct": 0.2383,
+        "unique_count": 2440,
+        "unique_ratio": 0.3203,
+        "quality_flag": "clean",
+        "sample_values": [
+          "MADISON AVENUE",
+          "AMSTERDAM AVENUE",
+          "BROADWAY",
+          "TRYON PLACE",
+          "HARRISON AVENUE"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "intersection_street_1",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.2751,
+        "raw_null_pct": 0.2751,
+        "unique_count": 2131,
+        "unique_ratio": 0.294,
+        "quality_flag": "warning",
+        "sample_values": [
+          "COLUMBUS AVENUE",
+          "31 AVENUE",
+          "UTOPIA PARKWAY",
+          "GROVE AVENUE",
+          "HUDSON STREET"
+        ],
+        "quality_reason": "Column has a meaningful rate of null or null-like values.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "intersection_street_2",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.2756,
+        "raw_null_pct": 0.2756,
+        "unique_count": 2129,
+        "unique_ratio": 0.2939,
+        "quality_flag": "warning",
+        "sample_values": [
+          "AMSTERDAM AVENUE",
+          "BROADWAY",
+          "TRYON PLACE",
+          "HARRISON AVENUE",
+          "GREENWICH STREET"
+        ],
+        "quality_reason": "Column has a meaningful rate of null or null-like values.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "address_type",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0062,
+        "raw_null_pct": 0.0062,
+        "unique_count": 5,
+        "unique_ratio": 0.0005,
+        "quality_flag": "clean",
+        "sample_values": [
+          "BLOCKFACE",
+          "ADDRESS",
+          "ADDRESS",
+          "ADDRESS",
+          "ADDRESS"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "city",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0572,
+        "raw_null_pct": 0.0572,
+        "unique_count": 46,
+        "unique_ratio": 0.0049,
+        "quality_flag": "clean",
+        "sample_values": [
+          "MANHATTAN",
+          "BRONX",
+          "BRONX",
+          "BRONX",
+          "NEW YORK"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "landmark",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.3488,
+        "raw_null_pct": 0.3488,
+        "unique_count": 1983,
+        "unique_ratio": 0.3045,
+        "quality_flag": "warning",
+        "sample_values": [
+          "WEST 74 STREET",
+          "29 STREET",
+          "80 DRIVE",
+          "SHARPE AVENUE",
+          "CHARLTON STREET"
+        ],
+        "quality_reason": "Column has a meaningful rate of null or null-like values.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "facility_type",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.9992,
+        "raw_null_pct": 0.9992,
+        "unique_count": 1,
+        "unique_ratio": 0.125,
+        "quality_flag": "critical",
+        "sample_values": [
+          "DSNY Garage",
+          "DSNY Garage",
+          "DSNY Garage",
+          "DSNY Garage",
+          "DSNY Garage"
+        ],
+        "quality_reason": "Column is effectively empty for most rows.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "status",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 6,
+        "unique_ratio": 0.0006,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Closed",
+          "Open",
+          "Open",
+          "Open",
+          "In Progress"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "due_date",
+        "declared_type": "object",
+        "detected_type": "date_text",
+        "null_pct": 0.9979,
+        "raw_null_pct": 0.9979,
+        "unique_count": 21,
+        "unique_ratio": 1.0,
+        "quality_flag": "critical",
+        "sample_values": [
+          "2026-06-08T02:04:24.000",
+          "2026-06-08T02:03:07.000",
+          "2026-06-08T02:01:59.000",
+          "2026-06-07T21:42:28.000",
+          "2026-06-07T20:06:45.000"
+        ],
+        "quality_reason": "Column is effectively empty for most rows.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "resolution_description",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.2745,
+        "raw_null_pct": 0.2745,
+        "unique_count": 147,
+        "unique_ratio": 0.0203,
+        "quality_flag": "warning",
+        "sample_values": [
+          "The Department of Transportation determined that this complaint is a duplicate of a previously filed complaint. The original complaint is being addressed.",
+          "The graffiti on this property has been scheduled to be removed by the City.",
+          "The graffiti on this property has been scheduled to be removed by the City.",
+          "The graffiti on this property has been scheduled to be removed by the City.",
+          "The Department of Health and Mental Hygiene has sent official written notification to the Owner/Landlord warning them of potential violations and instructing them to correct the situation. If the situation persists 21 days after your initial complaint, please make a new complaint."
+        ],
+        "quality_reason": "Column has a meaningful rate of null or null-like values.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "resolution_action_updated_date",
+        "declared_type": "object",
+        "detected_type": "date_text",
+        "null_pct": 0.2585,
+        "raw_null_pct": 0.2585,
+        "unique_count": 4996,
+        "unique_ratio": 0.6738,
+        "quality_flag": "warning",
+        "sample_values": [
+          "2026-05-09T02:32:59.000",
+          "2026-05-09T02:04:24.000",
+          "2026-05-09T02:03:07.000",
+          "2026-05-09T02:01:59.000",
+          "2026-05-09T01:46:11.000"
+        ],
+        "quality_reason": "Values look date-like but the column is stored as free-form text.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "community_board",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 71,
+        "unique_ratio": 0.0071,
+        "quality_flag": "clean",
+        "sample_values": [
+          "11 MANHATTAN",
+          "09 BRONX",
+          "10 BRONX",
+          "09 BRONX",
+          "07 MANHATTAN"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "council_district",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0316,
+        "raw_null_pct": 0.0316,
+        "unique_count": 51,
+        "unique_ratio": 0.0053,
+        "quality_flag": "clean",
+        "sample_values": [
+          "18.0",
+          "18.0",
+          "18.0",
+          "6.0",
+          "22.0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "police_precinct",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 78,
+        "unique_ratio": 0.0078,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Precinct 25",
+          "Precinct 43",
+          "Precinct 45",
+          "Precinct 43",
+          "Precinct 20"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "bbl",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.1206,
+        "raw_null_pct": 0.1206,
+        "unique_count": 6018,
+        "unique_ratio": 0.6843,
+        "quality_flag": "clean",
+        "sample_values": [
+          "2038130042.0",
+          "2039630018.0",
+          "2039480001.0",
+          "1011450044.0",
+          "4005790074.0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "borough",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 6,
+        "unique_ratio": 0.0006,
+        "quality_flag": "clean",
+        "sample_values": [
+          "MANHATTAN",
+          "BRONX",
+          "BRONX",
+          "BRONX",
+          "MANHATTAN"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "x_coordinate_state_plane",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0264,
+        "raw_null_pct": 0.0264,
+        "unique_count": 6673,
+        "unique_ratio": 0.6854,
+        "quality_flag": "clean",
+        "sample_values": [
+          "1025385.0",
+          "1025212.0",
+          "1024907.0",
+          "990124.0",
+          "1004815.0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "y_coordinate_state_plane",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0263,
+        "raw_null_pct": 0.0263,
+        "unique_count": 6803,
+        "unique_ratio": 0.6987,
+        "quality_flag": "clean",
+        "sample_values": [
+          "242869.0",
+          "243629.0",
+          "243990.0",
+          "223133.0",
+          "217721.0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "open_data_channel_type",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0827,
+        "raw_null_pct": 0.0,
+        "unique_count": 3,
+        "unique_ratio": 0.0003,
+        "quality_flag": "clean",
+        "sample_values": [
+          "PHONE",
+          "PHONE",
+          "PHONE",
+          "PHONE",
+          "ONLINE"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "park_facility_name",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0013,
+        "raw_null_pct": 0.0013,
+        "unique_count": 1,
+        "unique_ratio": 0.0001,
+        "quality_flag": "warning",
+        "sample_values": [
+          "Unspecified",
+          "Unspecified",
+          "Unspecified",
+          "Unspecified",
+          "Unspecified"
+        ],
+        "quality_reason": "Column has little or no value variation.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "park_borough",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 6,
+        "unique_ratio": 0.0006,
+        "quality_flag": "clean",
+        "sample_values": [
+          "MANHATTAN",
+          "BRONX",
+          "BRONX",
+          "BRONX",
+          "MANHATTAN"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "vehicle_type",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.9427,
+        "raw_null_pct": 0.9427,
+        "unique_count": 6,
+        "unique_ratio": 0.0105,
+        "quality_flag": "warning",
+        "sample_values": [
+          "Truck",
+          "Car",
+          "SUV",
+          "SUV",
+          "Car"
+        ],
+        "quality_reason": "Column has a meaningful rate of null or null-like values.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "taxi_company_borough",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.9989,
+        "raw_null_pct": 0.9989,
+        "unique_count": 4,
+        "unique_ratio": 0.3636,
+        "quality_flag": "critical",
+        "sample_values": [
+          "BROOKLYN",
+          "BROOKLYN",
+          "QUEENS",
+          "QUEENS",
+          "MANHATTAN"
+        ],
+        "quality_reason": "Column is effectively empty for most rows.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "taxi_pick_up_location",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.9883,
+        "raw_null_pct": 0.9883,
+        "unique_count": 95,
+        "unique_ratio": 0.812,
+        "quality_flag": "critical",
+        "sample_values": [
+          "6 EAST 32 STREET, MANHATTAN (NEW YORK), NY, 10016",
+          "405 EAST 73 STREET, MANHATTAN (NEW YORK), NY, 10021",
+          "1411 2 AVENUE, MANHATTAN (NEW YORK), NY, 10021",
+          "MADISON AVENUE AND EAST 126 STREET, MANHATTAN, NY, 10035",
+          "420 EAST 72 STREET, MANHATTAN (NEW YORK), NY, 10021"
+        ],
+        "quality_reason": "Column is effectively empty for most rows.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "bridge_highway_name",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.9948,
+        "raw_null_pct": 0.9948,
+        "unique_count": 27,
+        "unique_ratio": 0.5192,
+        "quality_flag": "critical",
+        "sample_values": [
+          "J",
+          "C",
+          "M",
+          "A",
+          "Eastchester Br"
+        ],
+        "quality_reason": "Column is effectively empty for most rows.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "bridge_highway_direction",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.9967,
+        "raw_null_pct": 0.9967,
+        "unique_count": 20,
+        "unique_ratio": 0.6061,
+        "quality_flag": "critical",
+        "sample_values": [
+          "A C to Manhattan",
+          "North Bound",
+          "West/Staten Island Bound",
+          "South/East (To Throgs Neck Br)",
+          "1 Uptown & The Bronx"
+        ],
+        "quality_reason": "Column is effectively empty for most rows.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "road_ramp",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.9972,
+        "raw_null_pct": 0.9972,
+        "unique_count": 3,
+        "unique_ratio": 0.1071,
+        "quality_flag": "critical",
+        "sample_values": [
+          "Roadway",
+          "Roadway",
+          "Ramp",
+          "Roadway",
+          "Roadway"
+        ],
+        "quality_reason": "Column is effectively empty for most rows.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "bridge_highway_segment",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.9948,
+        "raw_null_pct": 0.9948,
+        "unique_count": 31,
+        "unique_ratio": 0.5962,
+        "quality_flag": "critical",
+        "sample_values": [
+          "Mezzanine",
+          "Platform",
+          "Stairway",
+          "Mezzanine",
+          "Roadway"
+        ],
+        "quality_reason": "Column is effectively empty for most rows.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "latitude",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0264,
+        "raw_null_pct": 0.0264,
+        "unique_count": 7029,
+        "unique_ratio": 0.722,
+        "quality_flag": "clean",
+        "sample_values": [
+          "40.8331988852952",
+          "40.83528566716757",
+          "40.83627791576747",
+          "40.77912285440247",
+          "40.76424636044939"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "longitude",
+        "declared_type": "float64",
+        "detected_type": "float",
+        "null_pct": 0.0264,
+        "raw_null_pct": 0.0264,
+        "unique_count": 7029,
+        "unique_ratio": 0.722,
+        "quality_flag": "clean",
+        "sample_values": [
+          "-73.85135153003347",
+          "-73.85197205335906",
+          "-73.85307206816394",
+          "-73.97879052863051",
+          "-73.92576176327762"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "location",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0264,
+        "raw_null_pct": 0.0264,
+        "unique_count": 7029,
+        "unique_ratio": 0.722,
+        "quality_flag": "clean",
+        "sample_values": [
+          "POINT (-73.851351530033 40.833198885295)",
+          "POINT (-73.851972053359 40.835285667168)",
+          "POINT (-73.853072068164 40.836277915767)",
+          "POINT (-73.978790528631 40.779122854402)",
+          "POINT (-73.925761763278 40.764246360449)"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      }
+    ],
+    "cross_modal_findings": [],
+    "schema_quality_score": 0.7841
+  },
+  "issues": {
+    "issues": [
+      {
+        "issue_id": "status_status_chaos",
+        "column_name": "status",
+        "severity": "critical",
+        "category": "semantic_consistency",
+        "problem_description": "Column `status` has too many distinct values for a status-like field.",
+        "business_impact": "Users asking for a single operational state will miss records because the same concept is represented in multiple ways."
+      },
+      {
+        "issue_id": "x_coordinate_state_plane_status_chaos",
+        "column_name": "x_coordinate_state_plane",
+        "severity": "critical",
+        "category": "semantic_consistency",
+        "problem_description": "Column `x_coordinate_state_plane` has too many distinct values for a status-like field.",
+        "business_impact": "Users asking for a single operational state will miss records because the same concept is represented in multiple ways."
+      },
+      {
+        "issue_id": "y_coordinate_state_plane_status_chaos",
+        "column_name": "y_coordinate_state_plane",
+        "severity": "critical",
+        "category": "semantic_consistency",
+        "problem_description": "Column `y_coordinate_state_plane` has too many distinct values for a status-like field.",
+        "business_impact": "Users asking for a single operational state will miss records because the same concept is represented in multiple ways."
+      },
+      {
+        "issue_id": "created_date_date_text",
+        "column_name": "created_date",
+        "severity": "high",
+        "category": "date_handling",
+        "problem_description": "Column `created_date` looks like a date field but is stored as free-form text.",
+        "business_impact": "Date filters, time-series trends, and comparison logic can silently fail when the platform cannot trust a field as a real date."
+      },
+      {
+        "issue_id": "closed_date_date_text",
+        "column_name": "closed_date",
+        "severity": "high",
+        "category": "date_handling",
+        "problem_description": "Column `closed_date` looks like a date field but is stored as free-form text.",
+        "business_impact": "Date filters, time-series trends, and comparison logic can silently fail when the platform cannot trust a field as a real date."
+      },
+      {
+        "issue_id": "due_date_date_text",
+        "column_name": "due_date",
+        "severity": "high",
+        "category": "date_handling",
+        "problem_description": "Column `due_date` looks like a date field but is stored as free-form text.",
+        "business_impact": "Date filters, time-series trends, and comparison logic can silently fail when the platform cannot trust a field as a real date."
+      },
+      {
+        "issue_id": "resolution_action_updated_date_date_text",
+        "column_name": "resolution_action_updated_date",
+        "severity": "high",
+        "category": "date_handling",
+        "problem_description": "Column `resolution_action_updated_date` looks like a date field but is stored as free-form text.",
+        "business_impact": "Date filters, time-series trends, and comparison logic can silently fail when the platform cannot trust a field as a real date."
+      },
+      {
+        "issue_id": "facility_type_mostly_null",
+        "column_name": "facility_type",
+        "severity": "medium",
+        "category": "completeness",
+        "problem_description": "Column `facility_type` is effectively empty for most rows.",
+        "business_impact": "Sparse fields create misleading filters and noisy joins, and they rarely deserve a prominent place in a semantic model."
+      },
+      {
+        "issue_id": "due_date_mostly_null",
+        "column_name": "due_date",
+        "severity": "medium",
+        "category": "completeness",
+        "problem_description": "Column `due_date` is effectively empty for most rows.",
+        "business_impact": "Sparse fields create misleading filters and noisy joins, and they rarely deserve a prominent place in a semantic model."
+      },
+      {
+        "issue_id": "taxi_company_borough_mostly_null",
+        "column_name": "taxi_company_borough",
+        "severity": "medium",
+        "category": "completeness",
+        "problem_description": "Column `taxi_company_borough` is effectively empty for most rows.",
+        "business_impact": "Sparse fields create misleading filters and noisy joins, and they rarely deserve a prominent place in a semantic model."
+      },
+      {
+        "issue_id": "taxi_pick_up_location_mostly_null",
+        "column_name": "taxi_pick_up_location",
+        "severity": "medium",
+        "category": "completeness",
+        "problem_description": "Column `taxi_pick_up_location` is effectively empty for most rows.",
+        "business_impact": "Sparse fields create misleading filters and noisy joins, and they rarely deserve a prominent place in a semantic model."
+      },
+      {
+        "issue_id": "bridge_highway_name_mostly_null",
+        "column_name": "bridge_highway_name",
+        "severity": "medium",
+        "category": "completeness",
+        "problem_description": "Column `bridge_highway_name` is effectively empty for most rows.",
+        "business_impact": "Sparse fields create misleading filters and noisy joins, and they rarely deserve a prominent place in a semantic model."
+      },
+      {
+        "issue_id": "bridge_highway_direction_mostly_null",
+        "column_name": "bridge_highway_direction",
+        "severity": "medium",
+        "category": "completeness",
+        "problem_description": "Column `bridge_highway_direction` is effectively empty for most rows.",
+        "business_impact": "Sparse fields create misleading filters and noisy joins, and they rarely deserve a prominent place in a semantic model."
+      },
+      {
+        "issue_id": "road_ramp_mostly_null",
+        "column_name": "road_ramp",
+        "severity": "medium",
+        "category": "completeness",
+        "problem_description": "Column `road_ramp` is effectively empty for most rows.",
+        "business_impact": "Sparse fields create misleading filters and noisy joins, and they rarely deserve a prominent place in a semantic model."
+      },
+      {
+        "issue_id": "bridge_highway_segment_mostly_null",
+        "column_name": "bridge_highway_segment",
+        "severity": "medium",
+        "category": "completeness",
+        "problem_description": "Column `bridge_highway_segment` is effectively empty for most rows.",
+        "business_impact": "Sparse fields create misleading filters and noisy joins, and they rarely deserve a prominent place in a semantic model."
+      }
+    ],
+    "generator": "deterministic"
+  },
+  "remediation": {
+    "fixes": [
+      {
+        "issue_id": "status_status_chaos",
+        "priority": 1,
+        "plain_english_fix": "Map all status variants into a single controlled vocabulary before exposing the field to business users.",
+        "sql_snippet": "CASE WHEN LOWER(TRIM(status)) IN ('active', '1', 'yes', 'true', 'enrolled') THEN 'active' ELSE LOWER(TRIM(status)) END AS status_normalized",
+        "python_snippet": "df['status'] = df['status'].astype(str).str.strip().str.lower().replace({'1': 'active', 'yes': 'active', 'true': 'active', 'enrolled': 'active'})"
+      },
+      {
+        "issue_id": "x_coordinate_state_plane_status_chaos",
+        "priority": 2,
+        "plain_english_fix": "Map all status variants into a single controlled vocabulary before exposing the field to business users.",
+        "sql_snippet": "CASE WHEN LOWER(TRIM(x_coordinate_state_plane)) IN ('active', '1', 'yes', 'true', 'enrolled') THEN 'active' ELSE LOWER(TRIM(x_coordinate_state_plane)) END AS x_coordinate_state_plane_normalized",
+        "python_snippet": "df['x_coordinate_state_plane'] = df['x_coordinate_state_plane'].astype(str).str.strip().str.lower().replace({'1': 'active', 'yes': 'active', 'true': 'active', 'enrolled': 'active'})"
+      },
+      {
+        "issue_id": "y_coordinate_state_plane_status_chaos",
+        "priority": 3,
+        "plain_english_fix": "Map all status variants into a single controlled vocabulary before exposing the field to business users.",
+        "sql_snippet": "CASE WHEN LOWER(TRIM(y_coordinate_state_plane)) IN ('active', '1', 'yes', 'true', 'enrolled') THEN 'active' ELSE LOWER(TRIM(y_coordinate_state_plane)) END AS y_coordinate_state_plane_normalized",
+        "python_snippet": "df['y_coordinate_state_plane'] = df['y_coordinate_state_plane'].astype(str).str.strip().str.lower().replace({'1': 'active', 'yes': 'active', 'true': 'active', 'enrolled': 'active'})"
+      },
+      {
+        "issue_id": "created_date_date_text",
+        "priority": 4,
+        "plain_english_fix": "Normalize the field into a real date or timestamp before semantic modeling so filters and trends behave predictably.",
+        "sql_snippet": "SELECT TO_DATE(created_date, 'YYYY-MM-DD') AS created_date_date FROM your_table;",
+        "python_snippet": "df['created_date'] = pd.to_datetime(df['created_date'], errors='coerce')"
+      },
+      {
+        "issue_id": "closed_date_date_text",
+        "priority": 5,
+        "plain_english_fix": "Normalize the field into a real date or timestamp before semantic modeling so filters and trends behave predictably.",
+        "sql_snippet": "SELECT TO_DATE(closed_date, 'YYYY-MM-DD') AS closed_date_date FROM your_table;",
+        "python_snippet": "df['closed_date'] = pd.to_datetime(df['closed_date'], errors='coerce')"
+      },
+      {
+        "issue_id": "due_date_date_text",
+        "priority": 6,
+        "plain_english_fix": "Normalize the field into a real date or timestamp before semantic modeling so filters and trends behave predictably.",
+        "sql_snippet": "SELECT TO_DATE(due_date, 'YYYY-MM-DD') AS due_date_date FROM your_table;",
+        "python_snippet": "df['due_date'] = pd.to_datetime(df['due_date'], errors='coerce')"
+      },
+      {
+        "issue_id": "resolution_action_updated_date_date_text",
+        "priority": 7,
+        "plain_english_fix": "Normalize the field into a real date or timestamp before semantic modeling so filters and trends behave predictably.",
+        "sql_snippet": "SELECT TO_DATE(resolution_action_updated_date, 'YYYY-MM-DD') AS resolution_action_updated_date_date FROM your_table;",
+        "python_snippet": "df['resolution_action_updated_date'] = pd.to_datetime(df['resolution_action_updated_date'], errors='coerce')"
+      },
+      {
+        "issue_id": "facility_type_mostly_null",
+        "priority": 8,
+        "plain_english_fix": "Either remove this field from the semantic layer or document exactly why it is empty so it does not appear as a trusted attribute.",
+        "sql_snippet": "SELECT facility_type FROM your_table WHERE facility_type IS NOT NULL LIMIT 50;",
+        "python_snippet": "df = df.loc[df['facility_type'].notna()].copy()"
+      },
+      {
+        "issue_id": "due_date_mostly_null",
+        "priority": 9,
+        "plain_english_fix": "Either remove this field from the semantic layer or document exactly why it is empty so it does not appear as a trusted attribute.",
+        "sql_snippet": "SELECT due_date FROM your_table WHERE due_date IS NOT NULL LIMIT 50;",
+        "python_snippet": "df = df.loc[df['due_date'].notna()].copy()"
+      },
+      {
+        "issue_id": "taxi_company_borough_mostly_null",
+        "priority": 10,
+        "plain_english_fix": "Either remove this field from the semantic layer or document exactly why it is empty so it does not appear as a trusted attribute.",
+        "sql_snippet": "SELECT taxi_company_borough FROM your_table WHERE taxi_company_borough IS NOT NULL LIMIT 50;",
+        "python_snippet": "df = df.loc[df['taxi_company_borough'].notna()].copy()"
+      },
+      {
+        "issue_id": "taxi_pick_up_location_mostly_null",
+        "priority": 11,
+        "plain_english_fix": "Either remove this field from the semantic layer or document exactly why it is empty so it does not appear as a trusted attribute.",
+        "sql_snippet": "SELECT taxi_pick_up_location FROM your_table WHERE taxi_pick_up_location IS NOT NULL LIMIT 50;",
+        "python_snippet": "df = df.loc[df['taxi_pick_up_location'].notna()].copy()"
+      },
+      {
+        "issue_id": "bridge_highway_name_mostly_null",
+        "priority": 12,
+        "plain_english_fix": "Either remove this field from the semantic layer or document exactly why it is empty so it does not appear as a trusted attribute.",
+        "sql_snippet": "SELECT bridge_highway_name FROM your_table WHERE bridge_highway_name IS NOT NULL LIMIT 50;",
+        "python_snippet": "df = df.loc[df['bridge_highway_name'].notna()].copy()"
+      },
+      {
+        "issue_id": "bridge_highway_direction_mostly_null",
+        "priority": 13,
+        "plain_english_fix": "Either remove this field from the semantic layer or document exactly why it is empty so it does not appear as a trusted attribute.",
+        "sql_snippet": "SELECT bridge_highway_direction FROM your_table WHERE bridge_highway_direction IS NOT NULL LIMIT 50;",
+        "python_snippet": "df = df.loc[df['bridge_highway_direction'].notna()].copy()"
+      },
+      {
+        "issue_id": "road_ramp_mostly_null",
+        "priority": 14,
+        "plain_english_fix": "Either remove this field from the semantic layer or document exactly why it is empty so it does not appear as a trusted attribute.",
+        "sql_snippet": "SELECT road_ramp FROM your_table WHERE road_ramp IS NOT NULL LIMIT 50;",
+        "python_snippet": "df = df.loc[df['road_ramp'].notna()].copy()"
+      },
+      {
+        "issue_id": "bridge_highway_segment_mostly_null",
+        "priority": 15,
+        "plain_english_fix": "Either remove this field from the semantic layer or document exactly why it is empty so it does not appear as a trusted attribute.",
+        "sql_snippet": "SELECT bridge_highway_segment FROM your_table WHERE bridge_highway_segment IS NOT NULL LIMIT 50;",
+        "python_snippet": "df = df.loc[df['bridge_highway_segment'].notna()].copy()"
+      }
+    ],
+    "generator": "deterministic"
+  },
+  "report": {
+    "score": 0,
+    "grade": "F",
+    "confidence_level": "low",
+    "evidence_coverage": "csv_only",
+    "top_3_blockers": [
+      "Column `status` has too many distinct values for a status-like field.",
+      "Column `x_coordinate_state_plane` has too many distinct values for a status-like field.",
+      "Column `y_coordinate_state_plane` has too many distinct values for a status-like field."
+    ],
+    "one_line_verdict": "Structural issues were found. This score is provisional because semantic references were not provided; add a dashboard or dictionary for higher-confidence validation.",
+    "score_computation": [
+      {
+        "issue_id": "status_status_chaos",
+        "deduction": 20,
+        "reason": "Column `status` has too many distinct values for a status-like field."
+      },
+      {
+        "issue_id": "x_coordinate_state_plane_status_chaos",
+        "deduction": 20,
+        "reason": "Column `x_coordinate_state_plane` has too many distinct values for a status-like field."
+      },
+      {
+        "issue_id": "y_coordinate_state_plane_status_chaos",
+        "deduction": 20,
+        "reason": "Column `y_coordinate_state_plane` has too many distinct values for a status-like field."
+      },
+      {
+        "issue_id": "created_date_date_text",
+        "deduction": 10,
+        "reason": "Column `created_date` looks like a date field but is stored as free-form text."
+      },
+      {
+        "issue_id": "closed_date_date_text",
+        "deduction": 10,
+        "reason": "Column `closed_date` looks like a date field but is stored as free-form text."
+      },
+      {
+        "issue_id": "due_date_date_text",
+        "deduction": 10,
+        "reason": "Column `due_date` looks like a date field but is stored as free-form text."
+      },
+      {
+        "issue_id": "resolution_action_updated_date_date_text",
+        "deduction": 10,
+        "reason": "Column `resolution_action_updated_date` looks like a date field but is stored as free-form text."
+      },
+      {
+        "issue_id": "facility_type_mostly_null",
+        "deduction": 5,
+        "reason": "Column `facility_type` is effectively empty for most rows."
+      },
+      {
+        "issue_id": "due_date_mostly_null",
+        "deduction": 5,
+        "reason": "Column `due_date` is effectively empty for most rows."
+      },
+      {
+        "issue_id": "taxi_company_borough_mostly_null",
+        "deduction": 5,
+        "reason": "Column `taxi_company_borough` is effectively empty for most rows."
+      },
+      {
+        "issue_id": "taxi_pick_up_location_mostly_null",
+        "deduction": 5,
+        "reason": "Column `taxi_pick_up_location` is effectively empty for most rows."
+      },
+      {
+        "issue_id": "bridge_highway_name_mostly_null",
+        "deduction": 5,
+        "reason": "Column `bridge_highway_name` is effectively empty for most rows."
+      },
+      {
+        "issue_id": "bridge_highway_direction_mostly_null",
+        "deduction": 5,
+        "reason": "Column `bridge_highway_direction` is effectively empty for most rows."
+      },
+      {
+        "issue_id": "road_ramp_mostly_null",
+        "deduction": 5,
+        "reason": "Column `road_ramp` is effectively empty for most rows."
+      },
+      {
+        "issue_id": "bridge_highway_segment_mostly_null",
+        "deduction": 5,
+        "reason": "Column `bridge_highway_segment` is effectively empty for most rows."
+      }
+    ],
+    "generator": "deterministic"
+  },
+  "reasoning_trace": {
+    "path": "deterministic",
+    "validator": "deterministic",
+    "planner": "deterministic",
+    "scorer": "deterministic",
+    "note": "DATAREADY_DISABLE_LLM is set; deterministic-only mode active."
+  }
+}

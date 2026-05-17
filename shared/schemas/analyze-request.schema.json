@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dataready.local/schemas/analyze-request.schema.json",
+  "title": "AnalyzeRequest",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "audit_mode": {
+      "type": "string",
+      "enum": ["csv", "schema", "semantic_audit", "demo"]
+    },
+    "dataset_name": {
+      "type": "string"
+    },
+    "dataset_format": {
+      "type": "string",
+      "enum": ["csv", "parquet", "sql_schema", "demo"]
+    },
+    "includes_dashboard_image": {
+      "type": "boolean"
+    },
+    "includes_data_dictionary": {
+      "type": "boolean"
+    },
+    "compliance_mode": {
+      "type": "string",
+      "enum": ["standard", "schema_only", "redacted"]
+    }
+  },
+  "required": [
+    "audit_mode",
+    "dataset_name",
+    "dataset_format",
+    "includes_dashboard_image",
+    "includes_data_dictionary",
+    "compliance_mode"
+  ]
+}
+

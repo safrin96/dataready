@@ -1,0 +1,6 @@
+order_id,customer_id,order_date,region,channel,order_total,discount_pct,order_status
+10001,501,2026-04-01,West,web,249.90,0.05,completed
+10002,502,2026-04-02,West,store,89.50,0.00,completed
+10003,503,2026-04-03,East,web,129.00,0.10,completed
+10004,504,2026-04-03,South,partner,349.00,0.00,completed
+10005,505,2026-04-04,North,web,59.99,0.00,completed

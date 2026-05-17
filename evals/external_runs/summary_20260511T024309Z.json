@@ -1,0 +1,20 @@
+{
+  "run_id": "20260511T024309Z",
+  "datasets_dir": "/Users/Sshrabony/Claude/hackathon/dataready/datasets/external",
+  "runs_dir": "/Users/Sshrabony/Claude/hackathon/dataready/evals/external_runs",
+  "total_csv": 1,
+  "ok": 1,
+  "fail": 0,
+  "items": [
+    {
+      "filename": "uci_adult.csv",
+      "status": "ok",
+      "score": 75,
+      "grade": "C",
+      "confidence": "low",
+      "evidence": "csv_only",
+      "issues": 1,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "request": {
+    "audit_mode": "csv",
+    "dataset_name": "uci_adult",
+    "dataset_format": "csv",
+    "includes_dashboard_image": false,
+    "includes_data_dictionary": false,
+    "compliance_mode": "standard"
+  },
+  "profiler": {
+    "dataset_fingerprint": "uci_adult:30c297ddb2eddcb4",
+    "profiling_mode": "tabular_only",
+    "row_count_sampled": 10000,
+    "column_count": 15,
+    "multimodal_context_used": false,
+    "columns": [
+      {
+        "name": "age",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 71,
+        "unique_ratio": 0.0071,
+        "quality_flag": "clean",
+        "sample_values": [
+          "39",
+          "50",
+          "38",
+          "53",
+          "28"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "workclass",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 9,
+        "unique_ratio": 0.0009,
+        "quality_flag": "clean",
+        "sample_values": [
+          "State-gov",
+          "Self-emp-not-inc",
+          "Private",
+          "Private",
+          "Private"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "fnlwgt",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 8507,
+        "unique_ratio": 0.8507,
+        "quality_flag": "clean",
+        "sample_values": [
+          "77516",
+          "83311",
+          "215646",
+          "234721",
+          "338409"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "education",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 16,
+        "unique_ratio": 0.0016,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Bachelors",
+          "Bachelors",
+          "HS-grad",
+          "11th",
+          "Bachelors"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "education_num",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 16,
+        "unique_ratio": 0.0016,
+        "quality_flag": "clean",
+        "sample_values": [
+          "13",
+          "13",
+          "9",
+          "7",
+          "13"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "marital_status",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 7,
+        "unique_ratio": 0.0007,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Never-married",
+          "Married-civ-spouse",
+          "Divorced",
+          "Married-civ-spouse",
+          "Married-civ-spouse"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "occupation",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 15,
+        "unique_ratio": 0.0015,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Adm-clerical",
+          "Exec-managerial",
+          "Handlers-cleaners",
+          "Handlers-cleaners",
+          "Prof-specialty"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "relationship",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 6,
+        "unique_ratio": 0.0006,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Not-in-family",
+          "Husband",
+          "Not-in-family",
+          "Husband",
+          "Wife"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "race",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 5,
+        "unique_ratio": 0.0005,
+        "quality_flag": "clean",
+        "sample_values": [
+          "White",
+          "White",
+          "White",
+          "Black",
+          "Black"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "sex",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 2,
+        "unique_ratio": 0.0002,
+        "quality_flag": "clean",
+        "sample_values": [
+          "Male",
+          "Male",
+          "Male",
+          "Male",
+          "Female"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "capital_gain",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 102,
+        "unique_ratio": 0.0102,
+        "quality_flag": "clean",
+        "sample_values": [
+          "2174",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "capital_loss",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 73,
+        "unique_ratio": 0.0073,
+        "quality_flag": "clean",
+        "sample_values": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "hours_per_week",
+        "declared_type": "int64",
+        "detected_type": "integer",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 83,
+        "unique_ratio": 0.0083,
+        "quality_flag": "clean",
+        "sample_values": [
+          "40",
+          "13",
+          "40",
+          "40",
+          "40"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "native_country",
+        "declared_type": "object",
+        "detected_type": "free_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 41,
+        "unique_ratio": 0.0041,
+        "quality_flag": "clean",
+        "sample_values": [
+          "United-States",
+          "United-States",
+          "United-States",
+          "United-States",
+          "Cuba"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      },
+      {
+        "name": "income",
+        "declared_type": "object",
+        "detected_type": "categorical_text",
+        "null_pct": 0.0,
+        "raw_null_pct": 0.0,
+        "unique_count": 2,
+        "unique_ratio": 0.0002,
+        "quality_flag": "clean",
+        "sample_values": [
+          "<=50K",
+          "<=50K",
+          "<=50K",
+          "<=50K",
+          "<=50K"
+        ],
+        "quality_reason": "Column appears structurally healthy in the CSV-first pass.",
+        "phantom_dimension": false
+      }
+    ],
+    "cross_modal_findings": [],
+    "schema_quality_score": 1.0
+  },
+  "issues": {
+    "issues": [
+      {
+        "issue_id": "marital_status_status_chaos",
+        "column_name": "marital_status",
+        "severity": "critical",
+        "category": "semantic_consistency",
+        "problem_description": "Column `marital_status` has too many distinct values for a status-like field.",
+        "business_impact": "Users asking for a single operational state will miss records because the same concept is represented in multiple ways."
+      }
+    ],
+    "generator": "deterministic"
+  },
+  "remediation": {
+    "fixes": [
+      {
+        "issue_id": "marital_status_status_chaos",
+        "priority": 1,
+        "plain_english_fix": "Map all status variants into a single controlled vocabulary before exposing the field to business users.",
+        "sql_snippet": "CASE WHEN LOWER(TRIM(marital_status)) IN ('active', '1', 'yes', 'true', 'enrolled') THEN 'active' ELSE LOWER(TRIM(marital_status)) END AS marital_status_normalized",
+        "python_snippet": "df['marital_status'] = df['marital_status'].astype(str).str.strip().str.lower().replace({'1': 'active', 'yes': 'active', 'true': 'active', 'enrolled': 'active'})"
+      }
+    ],
+    "generator": "deterministic"
+  },
+  "report": {
+    "score": 75,
+    "grade": "C",
+    "confidence_level": "low",
+    "evidence_coverage": "csv_only",
+    "top_3_blockers": [
+      "Column `marital_status` has too many distinct values for a status-like field."
+    ],
+    "one_line_verdict": "Structural issues were found. This score is provisional because semantic references were not provided; add a dashboard or dictionary for higher-confidence validation.",
+    "score_computation": [
+      {
+        "issue_id": "marital_status_status_chaos",
+        "deduction": 20,
+        "reason": "Column `marital_status` has too many distinct values for a status-like field."
+      }
+    ],
+    "generator": "deterministic"
+  },
+  "reasoning_trace": {
+    "path": "deterministic",
+    "validator": "deterministic",
+    "planner": "deterministic",
+    "scorer": "deterministic",
+    "note": "DATAREADY_DISABLE_LLM is set; deterministic-only mode active."
+  }
+}

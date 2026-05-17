@@ -1,0 +1,41 @@
+node_modules/
+dist/
+.DS_Store
+.env
+.env.*
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.venv/
+coverage/
+*.pyc
+*.pyo
+*.log
+frontend/dist/
+backend/.venv/
+.pycache_tmp/
+
+# Large dataset files (downloaded for demo, not committed)
+datasets/flagship_fars_2023/accident.csv
+datasets/flagship_fars_2023/person.csv
+datasets/flagship_fars_2023/person_sample_5k.csv
+datasets/flagship_fars_2023/FARS_2023_NationalCSV.zip
+datasets/flagship_fars_2023/FARS_Coding_Validation_Manual_2021.pdf
+datasets/flagship_fars_2023/Traffic_Safety_Facts_2023_Overview.pdf
+datasets/flagship_fars_2023/Traffic_Safety_Facts_2023_Passenger_Vehicles.pdf
+datasets/flagship_nycdoe_2024/202324-ems-sqr-results.xlsx
+datasets/flagship_nycdoe_2024/school_snapshot_FLI_2024.pdf
+datasets/flagship_nycdoe_2024/2023-24-educator-guide-ems.pdf
+datasets/flagship_bls_employment/empsit_sep2024.pdf
+datasets/flagship_bls_employment/BLS_Handbook_CES.pdf
+datasets/external/
+datasets/external/**
+
+# Claude Code local settings
+.claude/
+
+# Keep small demo CSVs and manifests tracked
+# datasets/flagship_*/employment_situation_*.csv  (tracked)
+# datasets/flagship_*/school_quality_*.csv        (tracked)
+# datasets/final_test_pack/manifests/             (tracked)
+
