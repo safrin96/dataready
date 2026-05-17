@@ -57,9 +57,9 @@ We audited three authoritative government datasets — no synthetic data, no che
 
 | Dataset | Source | Score | Grade | Issues | Reasoning |
 |---|---|---|---|---|---|
-| US Traffic Fatalities (FARS 2023) | NHTSA | **20** | **F** | 19 | Gemini |
-| NYC School Quality Reports (2024) | NYC DOE | **23** | **F** | 23 | Gemini |
-| US Employment Situation (2019–2026) | BLS / FRED | **80** | **B** | 3 | Gemini |
+| US Traffic Fatalities (FARS 2023) | [NHTSA](https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars) | **20** | **F** | 19 | Gemini |
+| NYC School Quality Reports (2024) | [NYC DOE](https://infohub.nyced.org/reports/students-and-schools/school-quality/school-quality-reports-and-resources) | **23** | **F** | 23 | Gemini |
+| US Employment Situation (2019–2026) | [BLS / FRED](https://fred.stlouisfed.org/series/PAYEMS) | **80** | **B** | 3 | Gemini |
 
 DataReady discriminates: messy data gets an F with detailed remediation. Clean data gets a B with minimal flags. That's what makes the F scores trustworthy.
 
