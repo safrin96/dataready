@@ -93,7 +93,7 @@ Outputs
   Issue cards + fix pack + readiness score + export bundle
 ```
 
-Each agent produces structured JSON for the next. Deterministic profiling runs as a grounding layer — Gemini refines and extends, never hallucinates from scratch.
+Each agent produces structured JSON for the next. Deterministic profiling runs as a grounding layer. Gemini refines and extends, never hallucinates from scratch.
 
 ---
 
