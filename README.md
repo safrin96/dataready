@@ -252,6 +252,6 @@ MIT
 
 ## Author
 
-Built by [Your Name](https://linkedin.com/in/sumaiya-shrabony) for Milan AI Week 2026.
+Built by [Team Ground Truth](https://linkedin.com/in/sumaiya-shrabony) for Milan AI Week 2026.
 
 Questions? Open an issue or reach out on LinkedIn.
