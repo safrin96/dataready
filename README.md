@@ -11,9 +11,9 @@
 ## Demo
 
 <!-- Replace this placeholder with your recorded demo after filming -->
-> **Video demo coming soon** — a 3-minute walkthrough auditing real government datasets with DataReady.
+> A live walkthrough auditing real government datasets with DataReady.
 
-[![Watch the Demo](https://img.shields.io/badge/Watch%20Demo-YouTube-red?logo=youtube)](YOUR_YOUTUBE_LINK_HERE)
+[![Watch the Demo](https://img.shields.io/badge/Watch%20Demo-YouTube-red?logo=youtube)](https://youtu.be/M1nn-eKFYLc)
 
 <!-- Uncomment and replace with your actual video link:
 [![DataReady Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
