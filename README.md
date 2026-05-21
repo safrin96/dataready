@@ -6,7 +6,7 @@
 [![Milan AI Week Hackathon](https://img.shields.io/badge/Milan%20AI%20Week-2026-FF6B35)](https://lablab.ai/ai-hackathons/milan-ai-week-hackathon)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-### Check out the ![Live App](https://dataready-production.up.railway.app/) here!
+### Check out the ![Live App]([https://dataready-production.up.railway.app/](https://dataready-production.up.railway.app/)) here!
 ---
 
 ## Demo
